@@ -1,0 +1,1065 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Jade Chu">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="2021暑期实习末期及秋招面经3-5月前期都投了大厂。阿里岗位投错，没有投开发，投了算法，面了两次均挂，而且本次实习不能换岗位，所以阿里系均凉凉；百度投了nlp，结果桶排序没写出来，直接凉凉；字节测开进入二面，http未复习，凉凉；字节后端一面直接挂，数据库很多不会，后来一看innodb那本书，很多上面的；腾讯三次一面测开，前两面因为没好好复习cs基础就挂了，第三面还可以，但是由于表现出不想做业务">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jade Chu">
+<meta property="og:url" content="http://example.com/2021/07/23/2021%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E6%9C%AB%E6%9C%9F%E5%8F%8A%E7%A7%8B%E6%8B%9B%E9%9D%A2%E7%BB%8F/index.html">
+<meta property="og:site_name" content="Jade Chu">
+<meta property="og:description" content="2021暑期实习末期及秋招面经3-5月前期都投了大厂。阿里岗位投错，没有投开发，投了算法，面了两次均挂，而且本次实习不能换岗位，所以阿里系均凉凉；百度投了nlp，结果桶排序没写出来，直接凉凉；字节测开进入二面，http未复习，凉凉；字节后端一面直接挂，数据库很多不会，后来一看innodb那本书，很多上面的；腾讯三次一面测开，前两面因为没好好复习cs基础就挂了，第三面还可以，但是由于表现出不想做业务">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2021/07/23/2021%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E6%9C%AB%E6%9C%9F%E5%8F%8A%E7%A7%8B%E6%8B%9B%E9%9D%A2%E7%BB%8F/LooingForJob/imgs/63ms.jpg">
+<meta property="article:published_time" content="2021-07-23T10:33:38.785Z">
+<meta property="article:modified_time" content="2021-12-07T11:34:36.454Z">
+<meta property="article:author" content="Jade Chu">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/2021/07/23/2021%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E6%9C%AB%E6%9C%9F%E5%8F%8A%E7%A7%8B%E6%8B%9B%E9%9D%A2%E7%BB%8F/LooingForJob/imgs/63ms.jpg">
+  
+  
+  
+  <title>Jade Chu</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"xwodfQI7FirT5b8wLqYsFSio-gzGzoHsz","app_key":"XdWKK6oFyn3DxhyFCxnpeGjg","server_url":"https://xwodfqi7.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Jade&#39;s 奇妙能力世界</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text=""></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-07-23 18:33" pubdate>
+          2021年7月23日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          27k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          224 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="2021暑期实习末期及秋招面经"><a href="#2021暑期实习末期及秋招面经" class="headerlink" title="2021暑期实习末期及秋招面经"></a>2021暑期实习末期及秋招面经</h1><h3 id="3-5月"><a href="#3-5月" class="headerlink" title="3-5月"></a>3-5月</h3><p>前期都投了大厂。阿里岗位投错，没有投开发，投了算法，面了两次均挂，而且本次实习不能换岗位，所以阿里系均凉凉；百度投了nlp，结果桶排序没写出来，直接凉凉；字节测开进入二面，http未复习，凉凉；字节后端一面直接挂，数据库很多不会，后来一看innodb那本书，很多上面的；腾讯三次一面测开，前两面因为没好好复习cs基础就挂了，第三面还可以，但是由于表现出不想做业务测试，所以就挂了，再也没被捞起来，投了补录也杳无音信。其他的美团，猿题库，网易均笔试挂。。。过于自信以为笔试不重要。后面投小厂，结果因为没有项目经历都没有面试。。还有因为学校的问题（maybe）也没有收到面试，比如intel，amazon，还有招行信用卡。面了哈啰移动端，后面又转成后端，由于面试太水了就没去，然后去趣头条做go后端实习。。。</p>
+<h3 id="微软补录"><a href="#微软补录" class="headerlink" title="微软补录"></a>微软补录</h3><h4 id="6-3-一面"><a href="#6-3-一面" class="headerlink" title="6.3 一面"></a>6.3 一面</h4><p>哭死，今天一定是面的最好的一次，要是再不进二面。。。那也没有办法哈哈哈，继续好好刷题就是了。</p>
+<p>总感觉自己还是有点胆怯，自信点啦猪！</p>
+<p>废话不多说，下面进入正题：</p>
+<p>首先是自我介绍（自己选择不开摄像头）然后介绍了一个<strong>项目经历</strong>，本科毕业设计，一个医学领域的faq对话系统，确实没啥营养，还不知怎么的发了一篇论文，所以面试官就灵魂发问，<strong>有啥亮点</strong>？┑(￣Д ￣)┍，我就坦白说没啥亮点，要说有的话就是最后加了一个主题词判断模块进行了二次筛选。然后他说要是让我现在再做一个，我会怎么做，我说会先进行调研，然后基于开源的代码先复现，然后修改。接着问我学了哪些课程，我就说计算机网络，操作系统，数据库都学过，让我写一个<strong>sql</strong></p>
+<table>
+<thead>
+<tr>
+<th>date</th>
+<th>url</th>
+<th>people</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2021-05-01</td>
+<td><a target="_blank" rel="noopener" href="https://0.0.0.1/">https://1</a></td>
+<td>20</td>
+</tr>
+<tr>
+<td>2021-05-02</td>
+<td><a target="_blank" rel="noopener" href="https://0.0.0.1/">https://1</a></td>
+<td>40</td>
+</tr>
+<tr>
+<td>2021-05-03</td>
+<td><a target="_blank" rel="noopener" href="https://0.0.0.2/">https://2</a></td>
+<td>50</td>
+</tr>
+<tr>
+<td>people是该url在当天的访问次数，写出在上个月，访问人数最多的三个url，关键点就是要把在不同天访问相同url的次数叠加起来。没写出来。结束后补充结果如下</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">select</span> url <span class="hljs-keyword">from</span> <span class="hljs-keyword">table</span> <span class="hljs-keyword">where</span> <span class="hljs-type">date</span> ...<br></code></pre></td></tr></table></figure>
+
+<p>接着问了我<strong>操作系统的死锁</strong>，包括死锁是什么和怎么处理，我就说到满足那四个特征，处理的话包括死锁检测和死锁恢复这些，问我各自的优缺点，我说前者计算高，后者简单方便但是危险，如杀死进程。</p>
+<p>最后写了一个<strong>算法题</strong>，就是计算所有路径和，但是每个节点有权重，还要计算路径和。</p>
+<img src="./LooingForJob/imgs/63ms.jpg" srcset="/img/loading.gif" lazyload style="zoom:50%;" />
+
+<p>当时考虑了一下跟面试官沟通说采用先序遍历，然后每个节点维护一个权重和到该节点的路径和，递归即可。上图是写好代码后给的测试用例。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">node</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self,val</span>):<br>        self.val=val<br>        self.left=<span class="hljs-literal">None</span><br>        self.right=<span class="hljs-literal">None</span><br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get_sum</span>(<span class="hljs-params">self,root, weight, path</span>):<br>        <span class="hljs-keyword">if</span> root:<br>            path += root.val * (<span class="hljs-number">10</span> ** weight)<br>            <span class="hljs-keyword">if</span> root.left == <span class="hljs-literal">None</span> <span class="hljs-keyword">and</span> root.right == <span class="hljs-literal">None</span>:<br>                self.<span class="hljs-built_in">sum</span> += path<br>            self.get_sum(root.left, weight + <span class="hljs-number">1</span>, path)<br>            self.get_sum(root.right, weight + <span class="hljs-number">1</span>, path)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">sol</span>(<span class="hljs-params">self,root</span>):<br>        self.<span class="hljs-built_in">sum</span>=<span class="hljs-number">0</span><br>        self.get_sum(root,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>)<br>        <span class="hljs-keyword">return</span> self.<span class="hljs-built_in">sum</span><br><br>tree=node(<span class="hljs-number">1</span>)<br>tree.left=node(<span class="hljs-number">2</span>)<br>tree.right=node(<span class="hljs-number">3</span>)<br>tree.left.left=node(<span class="hljs-number">4</span>)<br>tree.left.right=node(<span class="hljs-number">5</span>)<br>sol_ins=solution()<br><span class="hljs-built_in">print</span>(sol_ins.sol(tree))<br></code></pre></td></tr></table></figure>
+
+<p>上图是写的代码，一次就跑通了，激动死。然后面试官让我<strong>设计测试用例</strong>，我就说首先考虑为节点为空，然后考虑树深度非常深，导致堆栈溢出，然后又让我考虑正常测试用例啥的。然后就问我有没有啥想问的，问了啥时候出结果，说一两周内hr会联系。</p>
+<h4 id="6-25-终面"><a href="#6-25-终面" class="headerlink" title="6.25 终面"></a>6.25 终面</h4><p>一面真的过了，哭哭，不过ms真的太慢了，两周之后才打电话说过了。好好准备终面！</p>
+<p>今天ms终面，紧张死惹。差不多一个小时，刚开始问我在哪个学校，上海科技大学研究生，明年毕业，然后问我有没有工作经历，最近在实习做golang后端开发，然后稍微介绍了一下我做的东西，我说日活量只有1w，然后就围绕这个展开了这可能就是leader？先问这个日活怎么实现，我说商务部统计的数据，他说要我实现要怎么做，我说客户端也可以统计，其次启动后也会调用后端的接口，如cold&#x2F;start，他问要怎么存储，我说就存数据库，他问我数据库要怎么设计，我问是字段的设计吗？他说不是，<strong>如果现在有20w人，一次都插入吗</strong>，我说插入太多肯定要分表，有监测工具，当响应太慢的话就分表，问我<strong>分表怎么实现的</strong>，我说具体我还没看，要我设计的话要怎么做，我说就先插入如果响应太慢判定要分表就分开，<strong>如果一次特别多</strong>，因为这个数据是我们自己看的，不需要实时性，所以可以用消息队列异步实现，<strong>查询的话</strong>就定时查询。<br>然后问我熟悉哪些语言，我说py，最近用go，了解cpp理论，然后让我<strong>介绍一下面向对象</strong>，在说到多态的时候把函数重载说成重写（原来就是overloading和overriding啊），问我叫重写吗？我说重载，然后让我说一下<strong>static</strong>没说上来。然后问我熟悉数据结构吗？我说熟悉，然后让我<strong>介绍一下b，b+和红黑树</strong>，<strong>红黑树</strong>又被问到了又没看！然后就到了写代码环节，我以为要我写b，b+，结果说先写个简单的，就单链表反转然后写的时候写了个双链表，打印的时候无限循环，找出来改掉了，然后说测试用例，最后说如果有环怎么判定，我就说双指针，一个走一步一个走两步，如果相遇就有环，然后让我实现，实现了也没啥问题，然后就问我有啥问题要问吗？就问是哪个部门，说进去才分，问我对ms有啥问题吗，我说没问题，over。对了，写代码的时候让我用cpp写，我说好久没写了，只能用py，不知道会不会成为减分项。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">node</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self,x</span>):<br>        self.val=x<br>        self.<span class="hljs-built_in">next</span>=<span class="hljs-literal">None</span><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">reversell</span>(<span class="hljs-params">root</span>):<br>    prev=<span class="hljs-literal">None</span><br>    curr=root<br><br>    <span class="hljs-keyword">while</span>(curr!=<span class="hljs-literal">None</span>):<br>        nxt=curr.<span class="hljs-built_in">next</span><br>        curr.<span class="hljs-built_in">next</span>=prev<br>        prev=curr<br>        curr=nxt<br>    <span class="hljs-keyword">return</span> prev<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">judgecircle</span>(<span class="hljs-params">root</span>):<br>    pt1=root<br>    pt2=root.<span class="hljs-built_in">next</span><br>    <span class="hljs-keyword">while</span>(pt1!=pt2):<br>        <span class="hljs-keyword">if</span> pt2==<span class="hljs-literal">None</span> <span class="hljs-keyword">or</span> pt2.<span class="hljs-built_in">next</span>==<span class="hljs-literal">None</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br>        pt1=pt1.<span class="hljs-built_in">next</span><br>        pt2=pt2.<span class="hljs-built_in">next</span>.<span class="hljs-built_in">next</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">prettyprint</span>(<span class="hljs-params">node</span>):<br>    <span class="hljs-keyword">while</span> node!=<span class="hljs-literal">None</span>:<br>        <span class="hljs-built_in">print</span>(node.val)<br>        node=node.<span class="hljs-built_in">next</span><br><br>ll=node(<span class="hljs-number">1</span>)<br>ll.<span class="hljs-built_in">next</span>=node(<span class="hljs-number">2</span>)<br>ll.<span class="hljs-built_in">next</span>.<span class="hljs-built_in">next</span>=node(<span class="hljs-number">3</span>)<br>ll.<span class="hljs-built_in">next</span>.<span class="hljs-built_in">next</span>.<span class="hljs-built_in">next</span>=node(<span class="hljs-number">4</span>)<br>ll.<span class="hljs-built_in">next</span>.<span class="hljs-built_in">next</span>.<span class="hljs-built_in">next</span>.<span class="hljs-built_in">next</span>=node(<span class="hljs-number">5</span>)<br>ll.<span class="hljs-built_in">next</span>.<span class="hljs-built_in">next</span>.<span class="hljs-built_in">next</span>.<span class="hljs-built_in">next</span>.<span class="hljs-built_in">next</span>=ll.<span class="hljs-built_in">next</span>.<span class="hljs-built_in">next</span><br><span class="hljs-built_in">print</span>(judgecircle(ll))<br></code></pre></td></tr></table></figure>
+
+<p>6.28 thanks letter。。。</p>
+<p>问了hr原因，hr还蛮好的，后来回复我了。“你好小伙伴不好意思才看到短信，回复晚了！我得到的消息是这样的：面试官表示CS基础还是可以的，一些概念的问题都回答上了，coding方面弱了一些，因为花了30+分钟在warm up question上，比预期的慢太多，另外还是存在bug的，所以最终没有通过，不好意思啦！”。</p>
+<p>所以总结一下！熟能生巧，简单级别的题必须秒杀，而且不能有bug。秋招继续！</p>
+<h3 id="滴滴秋储（提前批）"><a href="#滴滴秋储（提前批）" class="headerlink" title="滴滴秋储（提前批）"></a>滴滴秋储（提前批）</h3><h4 id="6-23-一面"><a href="#6-23-一面" class="headerlink" title="6.23 一面"></a>6.23 一面</h4><p>题外话，实习真的太重要了，真的非常感谢5月建议我立刻去实习的sx学长！首先自我介绍，然后直接问实习项目，虽然是我以为的简单的crud的用户收藏功能，但是<strong>考虑性能，大访问量及恶意攻击</strong>还是有非常多的东西，足足问了30分钟，问我<strong>短时间内有大量操作怎么办</strong>（我后来提到消息队列，勉强算一个）？还有<strong>怎么区分正常请求和异常请求？相关问题还问到怎么去校验用户身份</strong>（我说这里是中间件去拦截校验解析的，然后就没接着问），还问比如现在要做一个<strong>按照用户收藏量的准实时榜单怎么做？</strong>（比较常见的一个需求，我就说用redis的zset类型，然后他说假如非常大有10万，找出top 10怎么做，我说用分治，分别去找最大的，他让我估计一下性能，或者<strong>从哪几个角度来考虑性能</strong>（应该是响应时间RT，吞吐量tps，qps，并发用户数），我说时间和内存，这个问题没答好，没给出理想解），然后说看起来这个项目对redis重型依赖，问了解<strong>redis原理</strong>吗？还是只会用一下，我说原理还没看，只看了innodb的原理，然后就开始问innodb了，介绍一下，我就说这个是一种存储引擎，隔离级别默认是repeatable read，默认是聚集索引。然后问我索引实现，我说B+树，问我<strong>为啥不用红黑树或者二叉树而是用B或者B+树？</strong>我说因为比较胖可以减少io次数，关键点没答上，然后问我网络，让我从传输层和应用层选一个熟悉的来问（还是蛮好的），我说都可以，要说熟悉话就tcp，然后面试官说既然没有明确偏好就他来问，让我<strong>介绍一下https</strong>，我说http+ssl&#x2F;tls，可靠性是由面向连接端到端的tcp保证的，安全性是混合加密机制（非对称加密+对称加密），然后说了一下过程，然后问我<strong>如果公钥被伪造怎么办，假的第三方公证怎么办？</strong>感觉面试官好像是网络安全出身的，这块回答的稍微有点模糊，得再看2遍！然后就问我有没有啥想问的，我说没有编程吗，他说留到2面，帮我记录一下我的诉求。。。总结的话就是一定要把自己的知道的都说出来，不要不自信，怀疑自己，大大方方的说！</p>
+<h4 id="6-29-二面"><a href="#6-29-二面" class="headerlink" title="6.29 二面"></a>6.29 二面</h4><p>二面问了很多cs基础，包括三次握手四次挥手，都是比较经典的题目就不一一说了，有两个没回答的太好的，<strong>一个是主键，唯一索引和索引有什么区别</strong>，还有一个涉及到<strong>redis原理</strong>，我只说了几种数据结构，说到<strong>跳跃表</strong>，然后让我讲一下没讲出来。问的题目都比较基础，不是很难，还有啥tcp如何实现可靠传输，进程线程协程区别，进程间通信方法，事务的特性，隔离级别（突然发现这里也有点讲错了，幻读应该是repeatable read的缺点），中间还让我设计了一下数据库的表，最后写代码题，第一个是用+法实现-<em>&#x2F;，在除法的时候最开始没有考虑边界，后来考虑了除0，正负号问题，第二个就是</em>*<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/combination-sum/">组合总和</a><strong>，只不过是返回索引（这个题当时写的也有点问题，不过稍微改改就没问题了），先放一个版本。哎，看来</strong>回溯**得再搞一遍，又有点生疏了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">findsum</span>(<span class="hljs-params">self,nums, result</span>):<br>        path = []<br>        self.res = []<br><br>        <span class="hljs-keyword">def</span> <span class="hljs-title function_">getsumbyindex</span>(<span class="hljs-params">nums, idxs</span>):<br>            res = <span class="hljs-number">0</span><br>            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> idxs:<br>                res += nums[i]<br>            <span class="hljs-keyword">return</span> res<br><br>        <span class="hljs-keyword">def</span> <span class="hljs-title function_">backtrack</span>(<span class="hljs-params">nums, start, path, result</span>):<br>            <span class="hljs-keyword">if</span> getsumbyindex(nums, path) &gt; result:<br>                <span class="hljs-keyword">return</span><br>            <span class="hljs-keyword">if</span> getsumbyindex(nums, path) == result <span class="hljs-keyword">and</span> (path <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> self.res):<br>                self.res.append(path[:])<br>                <span class="hljs-keyword">return</span><br><br><br>            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(start, <span class="hljs-built_in">len</span>(nums)-<span class="hljs-number">1</span>):<br>                path.append(i)<br>                <span class="hljs-comment"># print(path)</span><br>                backtrack(nums, start + <span class="hljs-number">1</span>, path, result)<br>                path.pop()<br><br>        backtrack(nums, <span class="hljs-number">0</span>, path, result)<br>        <span class="hljs-keyword">return</span> self.res<br>s=solution()<br><span class="hljs-built_in">print</span>(s.findsum([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>],<span class="hljs-number">9</span>))<br></code></pre></td></tr></table></figure>
+
+<h4 id="7-1-交叉面"><a href="#7-1-交叉面" class="headerlink" title="7.1 交叉面"></a>7.1 交叉面</h4><p>交叉面问了一下我以后投算法还是工程，我说工程，他说为什么不选算法，我说深度不够，然后他说工程理解的深吗？然后就让我介绍一下，比如计算机网络，我先整体介绍了一下，说了分层，解耦，封装的思想，然后着重介绍了tcp实现可靠传输的机制，然后就问实习做了啥，说到redis的setnx加锁这些是原子操作，问我<strong>redis为啥是原子</strong>的，我说可能和事务的原子一样？他先让我介绍一下ACID，然后给我说不是，因为redis是单线程的，没有并发，所以是原子的。然后问我<strong>golang的interface（）</strong>，我就说了一下功能，然后问我<strong>这个和C++里面的类的继承和派生在设计上有什么不同</strong>，没有答上，他给我说让我了解一下在设计理念上C++和go的区别，go非常简洁优雅。然后就做了一道题，是**<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/palindrome-linked-list/">回文链表</a>**，要求用O(1)的空间复杂度，我想了一下用了O(n)的快慢指针。他还说没关系，要不是面试的话我肯定能想出来。真的太nice了吧！又nice思考又有深度，太值得学习了！</p>
+<p>对了，滴滴效率真的好高！</p>
+<p>过了过了！下午4点多就打电话说通过了！效率非常之高！</p>
+<h3 id="拼多多暑期实习"><a href="#拼多多暑期实习" class="headerlink" title="拼多多暑期实习"></a>拼多多暑期实习</h3><h4 id="笔试-三次面试（最后一次主管面试）-hr电话面试"><a href="#笔试-三次面试（最后一次主管面试）-hr电话面试" class="headerlink" title="笔试+三次面试（最后一次主管面试）+hr电话面试"></a>笔试+三次面试（最后一次主管面试）+hr电话面试</h4><p>7.12 下午主管面试+晚上hr面试。拼多多笔试在所有笔试里面算比较简单的，虽然我全A的也只有一道，其他的都是部分，所有面试都很奇怪，全程没有问基础，都问的是工程经验，比如如何实现分表，在什么场景下要怎么做，redis热key，代码中一系列串行操作如何保证全部的一致性。自认为回答的都不是很好，全凭自己的理解。深刻怀疑pdd看学历下菜，还好本科985。</p>
+<p>7.15 收到了实习offer！继续努力啦！努力是一定一定有回报的，没有的时候也不要心急，冲就好，带着你所有的热情！</p>
+<h3 id="百度提前批"><a href="#百度提前批" class="headerlink" title="百度提前批"></a>百度提前批</h3><h4 id="7-21-一面"><a href="#7-21-一面" class="headerlink" title="7.21 一面"></a>7.21 一面</h4><p>问了一些golang和c++的，部分回答了，部分没回答好，做的题目是<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/linked-list-cycle/">环形链表</a>和<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/longest-consecutive-sequence/">最长连续序列</a>，第一个秒做，第二个想错了，没做对。</p>
+<h4 id="7-23-二面"><a href="#7-23-二面" class="headerlink" title="7.23 二面"></a>7.23 二面</h4><p>问的问题非常基础，包括go json到结构体的转换等，回答的都不错，没有写题目，口头阐述思路，但是题目非常简单，类似频率统计这种，感觉不考察算法，就考察你的逻辑。</p>
+<h4 id="7-28-三面"><a href="#7-28-三面" class="headerlink" title="7.28 三面"></a>7.28 三面</h4><p>以后决定开启简洁模式。</p>
+<ol>
+<li>介绍一下实习做的项目，redis是怎么缓存的（和项目相关），锁是怎么实现的。</li>
+<li>最有成就感的事情是什么？（本科gpa一直增长以及实习做的东西上线）</li>
+<li>觉得做的最不好的事情是什么？（研究生在机器学习没学好的情况下就盲目搞交叉方向）</li>
+<li>3怎么解决的？（所以转开发了）</li>
+<li>期望的工作团队是怎样的？</li>
+<li>如果跟老师或者领导冲突会怎么办？举例？如果就是不同意对方的要怎么处理？</li>
+<li>设计一个类似简洁版抖音的产品怎么设计？（产品原型-确定后端功能-定义接口-考虑流量及存储的资源分配-考虑极端情况的可扩展性-接口的实现）</li>
+<li>机器有限的情况大流量的情况怎么办？（接口层熔断&#x2F;服务降级等-我没听清机器有限，说了增加机器。。）</li>
+<li>说一下服务降级怎么实现？（暂停一些不重要的功能，将资源用到重要的地方）</li>
+<li>现在有很多依赖关系的任务，怎么调度？（就像操作系统的调度方式，sjf，优先队列啥的，忘记了依赖关系。。介绍一下这两种，balabala，依赖关系怎么处理？找到入口，将其分级，一级的任务可以采用一种调度算法）</li>
+<li>老家，未来城市，还有哪些公司在面试？</li>
+<li>反问（工作主要内容以及什么时候出结果，最近一直都是问这两个）</li>
+</ol>
+<p>offer！</p>
+<h3 id="商汤提前批"><a href="#商汤提前批" class="headerlink" title="商汤提前批"></a>商汤提前批</h3><h4 id="7-21-一面-1"><a href="#7-21-一面-1" class="headerlink" title="7.21 一面"></a>7.21 一面</h4><p>记得问的问题也很基础，题目写的也还可以。好像问了grep命令，因为我写了熟悉linux操作。</p>
+<h4 id="8-2-二面"><a href="#8-2-二面" class="headerlink" title="8.2 二面"></a>8.2 二面</h4><p>这一面主要是项目介绍和一些系统设计及软skill的探讨，做的题目是<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/basic-calculator/">基本计算器</a>，该题目我在pdd实习的时候也遇到了，做的都不是很好。当然这一面还是做出来了，有些异常并未处理很好。刚开始先计算一个只有+-的字符串的值，我的思路是根据+split再分别根据-split，然后计算。有一些bug。。。然后升级版是加上括号（），我很智障的问加不加括号不是一样吗？你告诉我这-（1+2）&#x3D;&#x3D;-1+2？然后我的思路是用栈，遇到右括号将左括号之上的内容弹出来加以计算再入栈，计算该串可以用之前写好的函数。基本思路没问题，有些小bug，之后把leetcode上两道题都做了，有些题解思路很赞！</p>
+<p>贴一份后来写的该思路的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">calculate</span>(<span class="hljs-params">self, s: <span class="hljs-built_in">str</span></span>) -&gt; <span class="hljs-built_in">int</span>:<br>        <span class="hljs-comment"># try self</span><br>        stack=[]<br>        <span class="hljs-keyword">def</span> <span class="hljs-title function_">calplusminusstr</span>(<span class="hljs-params">s</span>): <span class="hljs-comment"># 计算只有+-没有括号的表达式的值</span><br>            i=<span class="hljs-number">0</span><br>            num=<span class="hljs-number">0</span><br>            n=<span class="hljs-built_in">len</span>(s)<br>            sign=<span class="hljs-number">1</span><br>            <span class="hljs-keyword">while</span> i&lt;n:<br>                <span class="hljs-keyword">if</span> s[i]==<span class="hljs-string">&#x27; &#x27;</span>:<br>                    i+=<span class="hljs-number">1</span><br>                <span class="hljs-keyword">elif</span> s[i]==<span class="hljs-string">&#x27;+&#x27;</span>:<br>                    sign=<span class="hljs-number">1</span><br>                    i+=<span class="hljs-number">1</span><br>                <span class="hljs-keyword">elif</span> s[i]==<span class="hljs-string">&#x27;-&#x27;</span>:<br>                    sign=-<span class="hljs-number">1</span><br>                    i+=<span class="hljs-number">1</span><br>                <span class="hljs-keyword">else</span>:<br>                    tmp=<span class="hljs-string">&#x27;&#x27;</span><br>                    <span class="hljs-keyword">while</span> i&lt;n <span class="hljs-keyword">and</span> s[i].isdigit():<br>                        tmp+=s[i]<br>                        i+=<span class="hljs-number">1</span><br>                    num+=sign*<span class="hljs-built_in">int</span>(tmp)<br>            <span class="hljs-keyword">return</span> num<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> s:<br>            <span class="hljs-keyword">if</span> i==<span class="hljs-string">&#x27;)&#x27;</span>:<br>                tmp=<span class="hljs-string">&#x27;&#x27;</span><br>                <span class="hljs-keyword">while</span> stack[-<span class="hljs-number">1</span>]!=<span class="hljs-string">&#x27;(&#x27;</span>:<br>                    ele=stack.pop()<br>                    tmp=ele+tmp<br>                stack.pop()<br>                result=calplusminusstr(tmp)<br>                <span class="hljs-keyword">if</span> result&lt;<span class="hljs-number">0</span>:<br>                    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(stack)&gt;<span class="hljs-number">0</span>:<br>                        <span class="hljs-keyword">if</span> stack[-<span class="hljs-number">1</span>]==<span class="hljs-string">&#x27;-&#x27;</span>:<br>                            stack[-<span class="hljs-number">1</span>]=<span class="hljs-string">&#x27;+&#x27;</span><br>                        <span class="hljs-keyword">else</span>:<br>                            stack[-<span class="hljs-number">1</span>]=<span class="hljs-string">&#x27;-&#x27;</span><br>                        stack.append(<span class="hljs-built_in">str</span>(<span class="hljs-built_in">abs</span>(result)))<br>                    <span class="hljs-keyword">else</span>:<br>                        stack.append(<span class="hljs-built_in">str</span>(result))<br>                <span class="hljs-keyword">else</span>:<br>                    stack.append(<span class="hljs-built_in">str</span>(<span class="hljs-built_in">abs</span>(result)))<br>            <span class="hljs-keyword">else</span>:<br>                stack.append(i)<br>        finstr=<span class="hljs-string">&#x27;&#x27;</span>.join(stack)<br>        <span class="hljs-keyword">return</span> calplusminusstr(finstr) <br></code></pre></td></tr></table></figure>
+
+<h4 id="8-5-三面"><a href="#8-5-三面" class="headerlink" title="8.5 三面"></a>8.5 三面</h4><p>基本上就是纯聊天+系统设计，看你性格和学习能力。</p>
+<ol>
+<li>怎么设计一个人工标注平台</li>
+<li>实习的时候跟其他人合作过吗？</li>
+<li>期待的团队氛围</li>
+<li>怎么看待互联网加班文化</li>
+<li>以后职业规划</li>
+<li>能不能实习？</li>
+</ol>
+<h4 id="8-13-HR面"><a href="#8-13-HR面" class="headerlink" title="8.13 HR面"></a>8.13 HR面</h4><p>职业规划，你现在最熟悉哪个语言，哪些其他公司也在流程中，说看中哪些方面来选公司，我说工作强度啥的，哎，最后hr找我确认说如果字节，百度，商汤同时给你发offer，你不会去字节的对吧？我说可能是吧，本来说要加我微信，过了好久都没加，可能凉了。可是我也确实没法骗人，就酱吧～HR姐姐说我好可爱&#x2F;shy</p>
+<h3 id="触宝sp专场"><a href="#触宝sp专场" class="headerlink" title="触宝sp专场"></a>触宝sp专场</h3><h4 id="7-26-一面"><a href="#7-26-一面" class="headerlink" title="7.26 一面"></a>7.26 一面</h4><p>没回答好的问题：<strong>怎么判断给哪些字段加索引，展开说说为什么有大量重复的item不适合加索引；为什么要用rpc而不是http&#x2F;tcp；</strong>其他问了些基础，3握4挥等，最后写一个二叉树前序遍历的题目easy。</p>
+<p>啊这过了过了，晚上看就过了，可能第一轮都不刷人，天知道我暑期实习第一面到底有多烂，挂了一堆。</p>
+<h4 id="8-5-二面"><a href="#8-5-二面" class="headerlink" title="8.5 二面"></a>8.5 二面</h4><ol>
+<li><p>虚函数内部实现（没答上）</p>
+</li>
+<li><p>Http1.0和2.0区别？（没答好）</p>
+</li>
+<li><p>tcp和udp区别</p>
+</li>
+<li><p>tcp怎么实现可靠性的？说到了累计确认，2rtt开销太大，是否了解优化方法？比如压缩编码等？</p>
+</li>
+<li><p>操作系统，进程线程协程区别？</p>
+</li>
+<li><p>代码题<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reorder-list/">重排链表</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">reorderList</span>(<span class="hljs-params">self, head: ListNode</span>) -&gt; <span class="hljs-literal">None</span>:<br>        <span class="hljs-comment"># 20210805 触宝2面笔试题，done</span><br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> head:<br>            <span class="hljs-keyword">return</span> head<br>        prev,nxt=head,head.<span class="hljs-built_in">next</span><br>        <span class="hljs-keyword">while</span> nxt!=<span class="hljs-literal">None</span> <span class="hljs-keyword">and</span> nxt.<span class="hljs-built_in">next</span>!=<span class="hljs-literal">None</span>:<br>            prev=prev.<span class="hljs-built_in">next</span><br>            nxt=nxt.<span class="hljs-built_in">next</span>.<span class="hljs-built_in">next</span><br>        mid=prev<br>        ls=[]<br>        midnxt=mid.<span class="hljs-built_in">next</span><br>        mid.<span class="hljs-built_in">next</span>=<span class="hljs-literal">None</span><br>        <span class="hljs-keyword">while</span> midnxt:<br>            ls.append(midnxt)<br>            midnxt=midnxt.<span class="hljs-built_in">next</span><br>        curr=head<br>        <span class="hljs-keyword">while</span>(ls):<br>            node=ls.pop()<br>            node.<span class="hljs-built_in">next</span>=curr.<span class="hljs-built_in">next</span><br>            curr.<span class="hljs-built_in">next</span>=node<br>            curr=curr.<span class="hljs-built_in">next</span>.<span class="hljs-built_in">next</span><br>        <span class="hljs-keyword">return</span> head<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>口述算法题，两个人摸球，100个，每个人只能摸2-5个，a先摸，怎么摸才能保证a摸到最后一个球？（知道这种题，死活想不起来解法，不过面试官挺好的，一步一步提示我，假如b先摸，a不管怎么摸都能得到一个定值，b2，a5，。。。b5，a2，所以定值是7，然后问我要怎么摸，然后我就悟了，100%7&#x3D;2，a先摸2个，再摸14轮就可以了）</p>
+<p>啊这，真的过了，看来题做出来真的重要啊。</p>
+</li>
+</ol>
+<h4 id="8-16-三面"><a href="#8-16-三面" class="headerlink" title="8.16 三面"></a>8.16 三面</h4><p>系统设计+性格</p>
+<h4 id="8-20-HR面"><a href="#8-20-HR面" class="headerlink" title="8.20 HR面"></a>8.20 HR面</h4><p>一线互联网没有不加班的，触宝在上海还好。地点在闵行七宝。</p>
+<h3 id="字节提前批"><a href="#字节提前批" class="headerlink" title="字节提前批"></a>字节提前批</h3><h4 id="7-27-一面"><a href="#7-27-一面" class="headerlink" title="7.27 一面"></a>7.27 一面</h4><p>整个过程非常规范！刚开先给我介绍了一下面试的流程啥的，然后就开始了正式面试。首先先挖我的实习经历，整体回答的还可以，问到<strong>为什么用redis的锁而不是golang语言的锁，用golang语言可以实现同样的效果吗？</strong>这个没有答好。接着先问了计算机网络，先介绍网络层次结构，我说了所有的三种结构，然后他说这几种都有传输层和应用层，介绍一下这两层的一些协议，问了一下tcp和udp的区别，问了<strong>http的头部的一些字段作用</strong>，这个只回答了一部分，说<strong>控制缓存的字段有哪些</strong>，我说了set-cookie和cookie以及csrf问题，然后问了<strong>控制页面某些部分缓存的字段是什么</strong>，比如缓存了图片或者啥，怎么知道不用再请求了，这个不知道。然后就开始问数据库，介绍了一下事务和acid，以及隔离级别和对应的锁的实现，问<strong>串行的锁协议是什么</strong>，这个说的不是非常清楚，不过最后问是给数据库加锁还是表啥的，我说给表加锁✌️。接着就让我写<strong>sql语句</strong>，不是很难，但是面试官就围绕一道题不停的修改，最后一个写的有点问题（这个题：<a target="_blank" rel="noopener" href="https://www.nowcoder.com/practice/4a052e3e1df5435880d4353eb18a91c6?tpId=82&&tqId=29764&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking">获取每个部门中当前员工薪水最高的相关信息</a>）。接着问语言问题，问的python&#x3D;&#x3D;，第一，<strong>装饰器了解吗，写一个装饰器计算被装饰函数执行时间</strong>，我大概写了一下介绍了一下执行流程，说相关的关键字忘记了，第二，<strong>介绍一下全局锁gil，为什么很多爬虫框架还是并发的，既然有gil的约束，然后引导我问爬虫是计算密集还是io密集，我说io，然后让我找gil和二者方式之间的关系</strong>，回答模糊。然后就做题，就是一道连续子数组的最大和，但是稍微修改了一下原题<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/">连续子数组的最大和</a>，之前不允许子数组为空数组，现在要求子数组可以为空，其和为0，我写的如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">calMaxSubSum</span>(<span class="hljs-params">nums</span>):<br>    n = <span class="hljs-built_in">len</span>(nums)<br>    dp = [<span class="hljs-number">0</span>] * (n + <span class="hljs-number">1</span>)<br><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, n + <span class="hljs-number">1</span>):<br>        <span class="hljs-keyword">if</span> dp[i - <span class="hljs-number">1</span>] &lt;= <span class="hljs-number">0</span>:<br>            dp[i] = nums[i - <span class="hljs-number">1</span>]<br>        <span class="hljs-keyword">else</span>:<br>            dp[i] = dp[i - <span class="hljs-number">1</span>] + nums[i - <span class="hljs-number">1</span>]<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">max</span>(dp)<br><span class="hljs-built_in">print</span>(calMaxSubSum([<span class="hljs-number">2</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, -<span class="hljs-number">9</span>]) <span class="hljs-comment"># 预期为4</span><br></code></pre></td></tr></table></figure>
+
+<p>问我复杂度，o(n)，然后就开始发散其他的写法，暴力，复杂度？o(n^2)，给我说分治，我没想到<strong>分治</strong>的思路，给我讲了一下，问复杂度，我说o(nlogn)，为啥？有点不是特别清楚。</p>
+<p>啊字节效率就是快哇，2h后过了过了！一周后二面！</p>
+<h4 id="8-3-二面"><a href="#8-3-二面" class="headerlink" title="8.3 二面"></a>8.3 二面</h4><p>面试官反馈：基础不错，但是不深入，问深就没有了，好在两个算法题都做出来了，不过确实挺简单的。</p>
+<ol>
+<li><p>go的理解</p>
+</li>
+<li><p>go垃圾回收</p>
+</li>
+<li><p>锁理解</p>
+</li>
+<li><p>可重入锁？</p>
+</li>
+<li><p>b vs b+，为什么b+更宽？（自己对非叶子结点掌握还不是很好）</p>
+</li>
+<li><p>前缀索引</p>
+</li>
+<li><p>跳表</p>
+</li>
+<li><p>为什么用跳表而不是二叉树</p>
+</li>
+<li><p>网络拥塞机制</p>
+</li>
+<li><p>http和https区别</p>
+</li>
+<li><p>在命令行中敲一个enter，os会发生什么？</p>
+</li>
+<li><p>redis为什么快？</p>
+</li>
+<li><p>12说到io多路复用，接着又问了select epoll了解吗？epoll底层数据结构？</p>
+</li>
+<li><p>看简历上写了elastic search？</p>
+</li>
+<li><p>算法题1: <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/validate-binary-search-tree/">验证二叉搜索树</a>, 刚开始很紧张怕做不出来，说思路是根据结点递归判断左子小右子大，结果有问题，破坏了儿子和父亲的关系。后来想了下用中序遍历，写的代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">isValidBST</span>(<span class="hljs-params">self, root: TreeNode</span>) -&gt; <span class="hljs-built_in">bool</span>:<br>        <br>        <span class="hljs-keyword">def</span> <span class="hljs-title function_">midTraverse</span>(<span class="hljs-params">root,res</span>):<br>            <span class="hljs-keyword">if</span> root:<br>                midTraverse(root.left,res)<br>                res.append(root.val)<br>                midTraverse(root.right,res)<br>            <span class="hljs-keyword">return</span> res<br><br>        res=[]<br>        flag=<span class="hljs-literal">True</span><br>        ls=midTraverse(root,res)<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,<span class="hljs-built_in">len</span>(res)):<br>            <span class="hljs-keyword">if</span> ls[i]&lt;=ls[i-<span class="hljs-number">1</span>]:<br>                flag=<span class="hljs-literal">False</span><br>                <span class="hljs-keyword">break</span><br>        <span class="hljs-keyword">return</span> flag<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>算法题2: <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/number-of-islands/">岛屿数量</a></p>
+</li>
+</ol>
+<p>根据codetop的记录，才刷完，秒写，代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">numIslands</span>(<span class="hljs-params">self, grid</span>) :<br>        cnt=<span class="hljs-number">0</span><br>        m,n=<span class="hljs-built_in">len</span>(grid),<span class="hljs-built_in">len</span>(grid[<span class="hljs-number">0</span>])<br>        <span class="hljs-keyword">def</span> <span class="hljs-title function_">inArea</span>(<span class="hljs-params">i,j</span>):<br>            <span class="hljs-keyword">if</span> i&gt;=<span class="hljs-number">0</span> <span class="hljs-keyword">and</span> i&lt;m <span class="hljs-keyword">and</span> j&gt;=<span class="hljs-number">0</span> <span class="hljs-keyword">and</span> j&lt;n:<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br>            <span class="hljs-keyword">else</span>:<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br>        <br>        <span class="hljs-keyword">def</span> <span class="hljs-title function_">dfs</span>(<span class="hljs-params">mtx,i,j</span>):<br>            mtx[i][j]=<span class="hljs-string">&#x27;0&#x27;</span><br>            <span class="hljs-keyword">if</span> inArea(i-<span class="hljs-number">1</span>, j) <span class="hljs-keyword">and</span> mtx[i-<span class="hljs-number">1</span>][j]==<span class="hljs-string">&#x27;1&#x27;</span>:<br>                dfs(mtx,i-<span class="hljs-number">1</span>,j)<br>            <span class="hljs-keyword">if</span> inArea(i+<span class="hljs-number">1</span>, j) <span class="hljs-keyword">and</span> mtx[i+<span class="hljs-number">1</span>][j]==<span class="hljs-string">&#x27;1&#x27;</span>:<br>                dfs(mtx,i+<span class="hljs-number">1</span>,j)<br>            <span class="hljs-keyword">if</span> inArea(i, j-<span class="hljs-number">1</span>) <span class="hljs-keyword">and</span> mtx[i][j-<span class="hljs-number">1</span>]==<span class="hljs-string">&#x27;1&#x27;</span>:<br>                dfs(mtx,i,j-<span class="hljs-number">1</span>)<br>            <span class="hljs-keyword">if</span> inArea(i, j+<span class="hljs-number">1</span>) <span class="hljs-keyword">and</span> mtx[i][j+<span class="hljs-number">1</span>]==<span class="hljs-string">&#x27;1&#x27;</span>:<br>                dfs(mtx,i, j+<span class="hljs-number">1</span>)<br>        <br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(m):<br>            <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):<br>                <span class="hljs-keyword">if</span> grid[i][j]==<span class="hljs-string">&#x27;1&#x27;</span>:<br>                    dfs(grid, i, j)<br>                    cnt+=<span class="hljs-number">1</span><br>        <span class="hljs-keyword">return</span> cnt<br></code></pre></td></tr></table></figure>
+
+<h4 id="8-10-三面"><a href="#8-10-三面" class="headerlink" title="8.10 三面"></a>8.10 三面</h4><ol>
+<li><p>前两面感觉怎么样？</p>
+</li>
+<li><p>面试官感觉怎么样？</p>
+</li>
+<li><p>自我介绍</p>
+</li>
+<li><p>介绍项目</p>
+</li>
+<li><p>深挖项目，详细介绍流程，why xxx（可能觉得简单没啥好问的就没问了）</p>
+</li>
+<li><p>项目用到了哪些组件（我不太知道具体的，说了sidecar）</p>
+</li>
+<li><p>sidecar介绍一下？（大概说了一下，面试官说换个问题，开始疯狂问操作系统）</p>
+</li>
+<li><p>首先进程和线程的区别？</p>
+</li>
+<li><p>用户线程和内核线程</p>
+</li>
+<li><p>线程的栈内容是什么？共享进程的哪些资源？</p>
+</li>
+<li><p>描述一下cpu是怎么调度线程的？</p>
+</li>
+<li><p>数据段的地址和内核空间的地址一样吗？（经典问题？我说了cpu地址要加基地址，他说就是这个问题）</p>
+</li>
+<li><p>做题，第一个是一个概率题，A，B先后投掷硬币，第一个投掷出正面的人赢，问A赢的概率？（刚开始枚举情况，发现后面是基于递归的，不知道如何解决，求提示，面试官说考虑数列的方法，A赢，A输B输A赢，～～～，然后我悟了，是等比数列前n项和，先给了一个带n的通项，然后n趋于∞，给出了2&#x2F;3的答案，没问题）</p>
+</li>
+<li><p>算法题，<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/maximum-width-of-binary-tree/">二叉树最大宽度</a>（宽度定义为从非空节点到非空节点的宽度，中间可以有空节点）（给出的算法是层次遍历，然后再按层去掉首尾为空的部分，求最大长度，实现，没问题）</p>
+<p>之后自己测试发现有问题，1-3-2-5-N-N-9-6-N-N-N-N-N-N-7有问题，中间空节点的子节点没考虑，通过率97&#x2F;112，现场写的代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">dropHeadTailNone</span>(<span class="hljs-params">ls</span>):<br>    <span class="hljs-keyword">while</span>(ls[<span class="hljs-number">0</span>]==<span class="hljs-literal">None</span>):<br>        ls.pop(<span class="hljs-number">0</span>)<br>    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(ls)==<span class="hljs-number">0</span>:<br>        <span class="hljs-keyword">return</span><br>    <span class="hljs-keyword">while</span>(ls[<span class="hljs-built_in">len</span>(ls)-<span class="hljs-number">1</span>]==<span class="hljs-literal">None</span>):<br>        ls.pop()<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">calWidth</span>(<span class="hljs-params">root</span>):<br>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> root:<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>    queue=[root]<br>    tmpqueue=[]<br>    res=[[root]]<br>    <span class="hljs-keyword">while</span> queue:<br>        node=queue.pop(<span class="hljs-number">0</span>)<br>        <span class="hljs-keyword">if</span> node!=<span class="hljs-literal">None</span>:<br>            tmpqueue.append(node.left)<br>            tmpqueue.append(node.right)<br>        <span class="hljs-keyword">if</span> queue==[]:<br>            res.append(tmpqueue[:])<br>            queue=tmpqueue<br>            tmpqueue=[]<br>    maxlen=<span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> ls <span class="hljs-keyword">in</span> res:<br>        dropHeadTailNone(ls)<br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(ls)&gt;maxlen:<br>            maxlen=<span class="hljs-built_in">len</span>(ls)<br>    <span class="hljs-keyword">return</span> maxlen<br></code></pre></td></tr></table></figure>
+
+<p>后续补充：由于没有考虑中间空节点的子节点，加了相应的判断遇到了超时的问题，然后参考了题解，使用相同的层次遍历的思路，只不过考虑节点的index，每一层只加入非空节点，然后用最后一个节点的值减去第一个再加一就是该层的宽度。Code：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">widthOfBinaryTree</span>(<span class="hljs-params">self, root: TreeNode</span>) -&gt; <span class="hljs-built_in">int</span>:<br>        <span class="hljs-comment"># inspired by comments in solution, consider node index</span><br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> root:<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>        queue=[(root,<span class="hljs-number">1</span>)]<br>        res=<span class="hljs-number">0</span><br>        <span class="hljs-keyword">while</span> queue:<br>            tmpqueue=[]<br>            <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(queue)):<br>                (node,pos)=queue.pop(<span class="hljs-number">0</span>)<br>                tmpqueue.append(pos)<br>                <span class="hljs-keyword">if</span> node.left:<br>                    queue.append((node.left,<span class="hljs-number">2</span>*pos))<br>                <span class="hljs-keyword">if</span> node.right:<br>                    queue.append((node.right,<span class="hljs-number">2</span>*pos+<span class="hljs-number">1</span>))<br>            res=<span class="hljs-built_in">max</span>(res,tmpqueue[-<span class="hljs-number">1</span>]-tmpqueue[<span class="hljs-number">0</span>]+<span class="hljs-number">1</span>)<br>        <span class="hljs-keyword">return</span> res<br>     <br></code></pre></td></tr></table></figure>
+
+<p>8.12 offer！</p>
+</li>
+</ol>
+<h3 id="滴滴橙心优选sp专场"><a href="#滴滴橙心优选sp专场" class="headerlink" title="滴滴橙心优选sp专场"></a>滴滴橙心优选sp专场</h3><h4 id="7-31-一面"><a href="#7-31-一面" class="headerlink" title="7.31 一面"></a>7.31 一面</h4><p>因为是java，和我的语言不匹配，只能问计算机基础。（加粗的未回答上&#x2F;回答好）</p>
+<p>三次握手</p>
+<p>四次挥手</p>
+<p>7层模型及每一层的作用</p>
+<p>tcp udp区别</p>
+<p>事务的四个特性</p>
+<p>四大隔离级别及对应的问题</p>
+<p><strong>innodb是哪一种及怎么解决相应的问题的（RR, 但引入了行锁，gap lock等）</strong></p>
+<p><strong>了解innodb的间隙锁吗</strong></p>
+<p><strong>redis为什么快（只回答了内存和单线程，阻塞io和非阻塞io方面没答上）</strong></p>
+<p><strong>redis string和c string有什么区别？</strong></p>
+<p>介绍项目</p>
+<p><strong>了解缓存击穿，缓存雪崩（缓存击穿是缓存过期没有，数据库有，但是大量请求缓存，没有就会大量去请求数据库，解决：热key永不过期，限流熔断，互斥锁异步读取缓存中的数据，bloom filter快速判断一个元素是否在一个容器中；缓存雪崩是大批key过期导致在缓存中没有，解决随机生成过期时间；热点数据永不过期；热点数据均匀分布在不同的缓存数据库中）</strong></p>
+<p>挂了。</p>
+<h3 id="B站"><a href="#B站" class="headerlink" title="B站"></a>B站</h3><h4 id="8-13-一面（整体偏工程）"><a href="#8-13-一面（整体偏工程）" class="headerlink" title="8.13 一面（整体偏工程）"></a>8.13 一面（整体偏工程）</h4><p>go routine 并发模型</p>
+<p>联合索引</p>
+<p>3次握手为什么不是两次？一方面因为防止失效链接，一方面因为序列号？</p>
+<p>算法题1: <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists/">相交链表</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">findMeetNode</span>(<span class="hljs-params">l1,l2</span>):<br>    pt1,pt2=l1,l2<br>    cnt=<span class="hljs-number">0</span><br>    <span class="hljs-keyword">while</span> (pt1!=pt2 <span class="hljs-keyword">and</span> cnt&lt;=<span class="hljs-number">2</span>):<br>        <span class="hljs-keyword">if</span> pt1:<br>            pt1=pt1.<span class="hljs-built_in">next</span><br>        <span class="hljs-keyword">else</span>:<br>            cnt+=<span class="hljs-number">1</span><br>            pt1=l2<br><br>        <span class="hljs-keyword">if</span> pt2:<br>            pt2=pt2.<span class="hljs-built_in">next</span><br>        <span class="hljs-keyword">else</span>:<br>            pt2=l1<br>    <span class="hljs-keyword">if</span> cnt==<span class="hljs-number">2</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">None</span><br>    <span class="hljs-keyword">return</span> pt<br></code></pre></td></tr></table></figure>
+
+<p>写的稍微有点冗余，不需要判断cnt的，因为二者相互走一遍肯定在结尾都等于None，Ideal solution:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">getIntersectionNode</span>(<span class="hljs-params">self, headA: ListNode, headB: ListNode</span>) -&gt; ListNode:<br>        pt1,pt2=headA,headB<br>        <span class="hljs-keyword">while</span> (pt1!=pt2):<br>            <span class="hljs-keyword">if</span> pt1:<br>                pt1=pt1.<span class="hljs-built_in">next</span><br>            <span class="hljs-keyword">else</span>:<br>                pt1=headB<br>            <span class="hljs-keyword">if</span> pt2:<br>                pt2=pt2.<span class="hljs-built_in">next</span><br>            <span class="hljs-keyword">else</span>:<br>                pt2=headA<br>        <span class="hljs-keyword">return</span> pt1<br></code></pre></td></tr></table></figure>
+
+<p>算法题2: 数组中间隔至少为k的两个数的最大和（力扣没找到）</p>
+<p>只说了暴力法以及优化的时候记录i到j区间的最大值，是一个二维数组，所以复杂度并未降低，面试官提示是一维数组，存起始到结束的最大值。</p>
+<h4 id="8-31-二面"><a href="#8-31-二面" class="headerlink" title="8.31 二面"></a>8.31 二面</h4><p>聊天+技术</p>
+<p>问项目中用了cookie，顺道问了跨域相关的（cookie+跨域：，refer：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/waters/articles/2869855.html%EF%BC%89">https://www.cnblogs.com/waters/articles/2869855.html）</a></p>
+<p>其他的就是常见问题，为什么索引用b+，访问一个链接过程，协程和线程区别之类的</p>
+<p>最后代码题要写一个数组中找k个最小的，写了快排。因为堆排序感觉写不出来。</p>
+<h4 id="9-6-三面"><a href="#9-6-三面" class="headerlink" title="9.6 三面"></a>9.6 三面</h4><p>最impressive的面试官，思路清晰，亲和力感染力强，口才非常好。都有点想加入了。</p>
+<p>整个面试主要聊天，穿插问题，只有两个技术问题，第一个是sql优化，我说了加索引，问我联合索引（一面未回答上的问题），依然没回答上，第二个写了一堆Linux命令，有4个没回答上，ln, sort, uniq, chown，其他的有chmod, cat, mv, rm, top等。</p>
+<p>感谢信了。</p>
+<h3 id="猿辅导"><a href="#猿辅导" class="headerlink" title="猿辅导"></a>猿辅导</h3><h4 id="8-13-一面"><a href="#8-13-一面" class="headerlink" title="8.13 一面"></a>8.13 一面</h4><p>项目介绍</p>
+<p>（竟然介绍了一个算法项目）</p>
+<p>tcp如何保证可靠？（滑动窗口大小如何商定？）</p>
+<p>算法题1: <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/dui-cheng-de-er-cha-shu-lcof/">对称的二叉树</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">isSymmetric</span>(<span class="hljs-params">self , root </span>):<br>        <span class="hljs-comment"># write code here</span><br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> root:<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br>        <span class="hljs-keyword">def</span> <span class="hljs-title function_">recur</span>(<span class="hljs-params">left,right</span>):<br>            <span class="hljs-keyword">if</span> left==<span class="hljs-literal">None</span> <span class="hljs-keyword">and</span> right==<span class="hljs-literal">None</span>:<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br>            <span class="hljs-keyword">if</span> left==<span class="hljs-literal">None</span> <span class="hljs-keyword">or</span> right==<span class="hljs-literal">None</span> <span class="hljs-keyword">or</span> left.val!=right.val:<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br>            <span class="hljs-keyword">if</span> left.val==right.val:<br>                <span class="hljs-keyword">return</span> recur(left.left,right.right) <span class="hljs-keyword">and</span> recur(left.right,right.left)<br><br>        <span class="hljs-keyword">return</span> recur(root.left,root.right)<br></code></pre></td></tr></table></figure>
+
+<p>算法题2: <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reverse-linked-list-ii/">反转链表 II</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">reverseBetween</span>(<span class="hljs-params">self , head , m , n </span>):<br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> head:<br>            <span class="hljs-keyword">return</span> head<br>        <span class="hljs-comment"># write code here</span><br>        <span class="hljs-keyword">def</span> <span class="hljs-title function_">reversell</span>(<span class="hljs-params">root</span>):<br>            curr=root<br>            prev=<span class="hljs-literal">None</span><br>            <span class="hljs-keyword">while</span> curr!=<span class="hljs-literal">None</span>:<br>                nxt=curr.<span class="hljs-built_in">next</span><br>                curr.<span class="hljs-built_in">next</span>=prev <br>                prev=curr<br>                curr=nxt<br>            <span class="hljs-keyword">return</span> prev<br>        dummy=ListNode(-<span class="hljs-number">1</span>)<br>        dummy.<span class="hljs-built_in">next</span>=head<br>        cnt=<span class="hljs-number">0</span><br>        curr=dummy<br>        llhead,lltail=<span class="hljs-literal">None</span>,<span class="hljs-literal">None</span><br>        begin=<span class="hljs-literal">None</span><br>        end=<span class="hljs-literal">None</span><br>        <span class="hljs-keyword">while</span> curr!=<span class="hljs-literal">None</span>:<br>            <span class="hljs-keyword">if</span> cnt==(m-<span class="hljs-number">1</span>):<br>                llhead=curr.<span class="hljs-built_in">next</span><br>                begin=curr<br>            <span class="hljs-keyword">if</span> cnt==n:<br>                lltail=curr<br>                end=curr.<span class="hljs-built_in">next</span><br>                curr.<span class="hljs-built_in">next</span>=<span class="hljs-literal">None</span><br>                <span class="hljs-keyword">break</span><br>            cnt +=<span class="hljs-number">1</span><br>            curr=curr.<span class="hljs-built_in">next</span><br>        newbegin=reversell(llhead)<br>        begin.<span class="hljs-built_in">next</span>=newbegin <br>        llhead.<span class="hljs-built_in">next</span>=end<br>        <span class="hljs-keyword">return</span> dummy.<span class="hljs-built_in">next</span><br></code></pre></td></tr></table></figure>
+
+<p>这两道题都A辣，做第二题的时候描述了我的思路，面试官说思路挺清晰的哈哈哈！刷题真的有进步，感觉好开心！</p>
+<h4 id="8-20-二面"><a href="#8-20-二面" class="headerlink" title="8.20 二面"></a>8.20 二面</h4><p>项目介绍（实习项目）</p>
+<p>问基础，基本上之前都被问题，很常见的问题：</p>
+<p>redis string 底层</p>
+<p>事务 acid，解决什么问题，innodb是哪个隔离级别，是否解决了幻读的问题，怎么解决的（这个是之前秋招滴滴问的，当时不会）</p>
+<p>一个网址请求的网络过程</p>
+<p>dns的过程（该问题之前也被问过，好像是pdd问的），以及dns底层协议（传输层的）</p>
+<p>说一下银行家算法</p>
+<p>算法题 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/">在排序数组中查找元素的第一个和最后一个位置</a>，也比较简单，虽然当时写的有点小bug，稍微修改后的版本。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">searchRange</span>(<span class="hljs-params">self, nums: <span class="hljs-type">List</span>[<span class="hljs-built_in">int</span>], target: <span class="hljs-built_in">int</span></span>) -&gt; <span class="hljs-type">List</span>[<span class="hljs-built_in">int</span>]:<br>        <span class="hljs-comment"># 20210820猿辅导2面</span><br>        <span class="hljs-keyword">def</span> <span class="hljs-title function_">binarySearch</span>(<span class="hljs-params">nums, l, r, target</span>):<br>            <span class="hljs-keyword">if</span> l &lt;= r:<br>                mid = (l + r) // <span class="hljs-number">2</span><br>                <span class="hljs-keyword">if</span> nums[mid] == target:<br>                    <span class="hljs-keyword">return</span> mid<br>                <span class="hljs-keyword">elif</span> nums[mid] &gt; target:<br>                    <span class="hljs-keyword">return</span> binarySearch(nums, l, mid - <span class="hljs-number">1</span>, target)<br>                <span class="hljs-keyword">else</span>:<br>                    <span class="hljs-keyword">return</span> binarySearch(nums, mid + <span class="hljs-number">1</span>, r, target)<br>            <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span><br><br>        n = <span class="hljs-built_in">len</span>(nums)<br>        idx = binarySearch(nums, <span class="hljs-number">0</span>, n - <span class="hljs-number">1</span>, target)<br>        <span class="hljs-keyword">if</span> idx == -<span class="hljs-number">1</span>:<br>            <span class="hljs-keyword">return</span> [-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>]<br>        lidx,ridx=idx,idx<br>        <span class="hljs-keyword">while</span> lidx &gt; <span class="hljs-number">0</span>:<br>            <span class="hljs-keyword">if</span> nums[lidx - <span class="hljs-number">1</span>] == target:<br>                lidx -= <span class="hljs-number">1</span><br>            <span class="hljs-keyword">else</span>:<br>                <span class="hljs-keyword">break</span><br>        <span class="hljs-keyword">while</span> ridx&lt;<span class="hljs-built_in">len</span>(nums)-<span class="hljs-number">1</span>:<br>            <span class="hljs-keyword">if</span> nums[ridx+<span class="hljs-number">1</span>]==target:<br>                ridx+=<span class="hljs-number">1</span><br>            <span class="hljs-keyword">else</span>:<br>                <span class="hljs-keyword">break</span><br>        <span class="hljs-keyword">return</span> [lidx,ridx]<br></code></pre></td></tr></table></figure>
+
+<p>55朋友都说我拿到了大厂的offer不应该再面了，可是之前都已经投了，就面完吧……这几次是裸面的，靠之前复习的底子，不过还不错hh！</p>
+<h4 id="8-22-三面"><a href="#8-22-三面" class="headerlink" title="8.22 三面"></a>8.22 三面</h4><p>项目介绍（实习项目）</p>
+<p>为什么用redis</p>
+<p>分布式锁超时了怎么办（分布式锁都会有一个超时时间）【超时问题是说在上一个线程拿到锁进入临界区后未执行完逻辑，锁已经失效所以新的线程会拿到锁同时进入临界区，这样就会有多个线程同时执行临界区中的逻辑。解决方法就是启动一个守护线程，动态设置锁的时间，如果上一个线程没有执行完就延长锁的时间】</p>
+<p>为什么三次握手？（说了防止失效链接，还有其他的吗？B站同款问题）【seq同步】</p>
+<p>微信在电脑端扫码登陆的流程是怎么样的？（包括手机端，电脑端和服务器端的交互）【<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/doc/oplatform/Website_App/WeChat_Login/Wechat_Login.html%E3%80%91">https://developers.weixin.qq.com/doc/oplatform/Website_App/WeChat_Login/Wechat_Login.html】</a></p>
+<p>做题，重建多叉树，一定要养成先描述思路的意识！我没想清楚就直接写，让我先描述思路，然后问我怎么找根节点就给我问懵了，提示我根节点没有父节点。然后写了一下，说思路没问题但是实现细节有问题。后面自己又写了几十分钟，应该没啥问题的版本：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Node</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, key=<span class="hljs-number">0</span></span>):<br>        self.key = key<br>        self.sons=[]<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">insertSon</span>(<span class="hljs-params">self,son</span>):<br>        self.sons.append(son)<br><br>inp = [[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">6</span>],[<span class="hljs-number">6</span>,<span class="hljs-number">7</span>],[<span class="hljs-number">6</span>,<span class="hljs-number">8</span>],[<span class="hljs-number">8</span>,<span class="hljs-number">9</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">4</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">5</span>]]<br>dic = &#123;&#125;<br>sons = <span class="hljs-built_in">set</span>()<br><span class="hljs-keyword">for</span> pair <span class="hljs-keyword">in</span> inp:<br>    sons.add(pair[<span class="hljs-number">1</span>])<br>    <span class="hljs-keyword">if</span> pair[<span class="hljs-number">0</span>] <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> dic.keys():<br>        dic[pair[<span class="hljs-number">0</span>]] = [pair[<span class="hljs-number">1</span>]]<br>    <span class="hljs-keyword">else</span>:<br>        dic[pair[<span class="hljs-number">0</span>]].append(pair[<span class="hljs-number">1</span>])<br><span class="hljs-built_in">print</span>(dic)<br>rootval = -<span class="hljs-number">1</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(inp)):<br>    <span class="hljs-keyword">if</span> inp[i][<span class="hljs-number">0</span>] <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> sons:<br>        rootval = inp[i][<span class="hljs-number">0</span>]<br>        <span class="hljs-keyword">break</span><br><span class="hljs-built_in">print</span>(rootval)<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">recur</span>(<span class="hljs-params">key, dic</span>):<br>    node = Node(key)<br>    <span class="hljs-keyword">if</span> key <span class="hljs-keyword">in</span> dic.keys():<br>        children = dic[key]<br>        <span class="hljs-keyword">for</span> child <span class="hljs-keyword">in</span> children:<br>            node.insertSon(recur(child,dic))<br>    <span class="hljs-keyword">return</span> node<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">preorder</span>(<span class="hljs-params">root</span>) :<br>    res=[]<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">pretraverse</span>(<span class="hljs-params">node</span>):<br>        <span class="hljs-keyword">if</span> node:<br>            res.append(node.key)<br>            <span class="hljs-keyword">for</span> child <span class="hljs-keyword">in</span> node.sons:<br>                pretraverse(child)<br>    pretraverse(root)<br>    <span class="hljs-keyword">return</span> res<br><br>root=recur(rootval, dic)<br><span class="hljs-comment"># node8=Node(8) # N叉树前序遍历是123456789</span><br><span class="hljs-comment"># node8.insertSon(Node(9))</span><br><span class="hljs-comment"># node6=Node(6)</span><br><span class="hljs-comment"># node6.insertSon(Node(7))</span><br><span class="hljs-comment"># node6.insertSon(node8)</span><br><span class="hljs-comment"># node2=Node(2)</span><br><span class="hljs-comment"># node2.insertSon(Node(3))</span><br><span class="hljs-comment"># node2.insertSon(Node(4))</span><br><span class="hljs-comment"># node2.insertSon(Node(5))</span><br><span class="hljs-comment"># node1=Node(1)</span><br><span class="hljs-comment"># node1.insertSon(node2)</span><br><span class="hljs-comment"># node1.insertSon(node6)</span><br><span class="hljs-comment"># root=node1</span><br><span class="hljs-built_in">print</span>(preorder(root))<br></code></pre></td></tr></table></figure>
+
+<p>最后问我平时会看技术类的书吗？看过哪些？介绍一个。</p>
+<p>本次体验大打击，面试官应该是个技术很牛的小哥👍猪要继续努力，真的。</p>
+<p>终面挂啦！最近面试以来最难的一次。</p>
+<h3 id="拼多多"><a href="#拼多多" class="headerlink" title="拼多多"></a>拼多多</h3><h4 id="8-25-三面"><a href="#8-25-三面" class="headerlink" title="8.25 三面"></a>8.25 三面</h4><p>C++有垃圾回收吗</p>
+<p>最熟悉哪门语言，why py？GIL了解吗？</p>
+<p>分布式锁怎么实现？</p>
+<p>review 笔试没做出来的题，依旧没出来（期望从小到大排序，但是允许局部无序，但前一个比后一个大不能超过一个数，求总的排列数）</p>
+<p>接着实现一个*匹配，最后用递归做了，过了给定的测试cases，问怎么优化，我说dp。</p>
+<p>然后就问能不能抗压，每天工作12h。</p>
+<p>估计凉了。收到HR面了。</p>
+<h4 id="9-4-HR面"><a href="#9-4-HR面" class="headerlink" title="9.4 HR面"></a>9.4 HR面</h4><p>最好少说话，一不小心就被套出话了。</p>
+<p>9.27看应聘终止啦！看来确实要看看薪资以及学会适当的撒谎。</p>
+<h3 id="海康威视（云计算）"><a href="#海康威视（云计算）" class="headerlink" title="海康威视（云计算）"></a>海康威视（云计算）</h3><h4 id="8-25-一面"><a href="#8-25-一面" class="headerlink" title="8.25 一面"></a>8.25 一面</h4><p>问Linux命令，包括进程相关（哪个状态表示在等待），磁盘查看，网络</p>
+<p>对哪个语言熟悉，py的装饰器，干什么用的</p>
+<p>mysql性能优化的方式</p>
+<h4 id="10-8-线下综合素质面"><a href="#10-8-线下综合素质面" class="headerlink" title="10.8 线下综合素质面"></a>10.8 线下综合素质面</h4><p>聊天</p>
+<h3 id="shopee"><a href="#shopee" class="headerlink" title="shopee"></a>shopee</h3><h4 id="8-29-一面"><a href="#8-29-一面" class="headerlink" title="8.29 一面"></a>8.29 一面</h4><p>整体体验：问了非常多的基础，还是比较深入的。</p>
+<p>os：cpu密集和io密集（cpu密集是cpu是瓶颈，内存磁盘的相对性能更好，或者就是大量时间用于计算，io密集则相反。cpu密集需要大量计算，效率很重要，所以可以用c等底层语言，而涉及到网络，磁盘等都是io密集，可以用py等语言。）对于io密集任务，采用py多线程合适，共享进程资源；计算密集时适合py多进程，因为GIL，所以只能有一个线程，所以不合适。</p>
+<p>db：cpu和<strong>os的缓存</strong>（没听过os cache的概念。。cpu cache是为了平衡cpu和内存之间的速度差，可以分为L1,L2,L3。os cache：问了同学，应该是page cache，将磁盘中的内容缓存在内存中，由os管理（相关概念，TLB，快表: 一种硬件，缓存MMU使用的页表，在地址映射中增加一个寄存器存放当前访问最频繁的少数的页面的页号））</p>
+<p>主键索引和唯一索引的区别：本质不同，前者是一种约束，后者是一种索引，主键创建后一定包含一个唯一索引，唯一索引不一定是主键。唯一索引列允许空值，主键列不允许空值。主键可以作为外键，唯一索引则不同。一个表只能有一个主键，但可以有多个唯一索引。主键索引和聚集索引没有必然联系–最好实践。</p>
+<p>代码题是一个句子，空格分割单词，然后按长度从小到大排序，将第一个单词的首字母大写，注意长度相同的按原来顺序。</p>
+<p>（面试完代码没粘出来，说一下思路）因为长度相同时，顺序不变，考虑稳定排序，mergesort就可，但是也可以用不稳定排序，我就是这样解的，我先将单词按长度:[单词1，单词2，…]这样存起来，然后对长度排序，这时候长度都是不同的，最后再将val按key大小拼接起来即可。这里排序我写了快排，run的时候也没问题。</p>
+<blockquote>
+<blockquote>
+<p>神奇，感觉回答的还可以，竟然挂了。</p>
+</blockquote>
+</blockquote>
+<h3 id="阿里"><a href="#阿里" class="headerlink" title="阿里"></a>阿里</h3><h4 id="9-10-一面"><a href="#9-10-一面" class="headerlink" title="9.10 一面"></a>9.10 一面</h4><p>总结：讲道理这次岗位又投错了，注定和阿里无缘。（丝毫不会Java投了Java岗。</p>
+<p>第一志愿阿里云简历挂。</p>
+<p>第二志愿CTO线，一面电话面试，没有撕代码环节，都是工程问题，后面象征性的问了几个基础问题，面完就挂了。也是属于不match的情况吧。</p>
+<ol>
+<li><p>上来先问怎么实现服务端幂等性，也就是接口幂等性。其实我说的思路差不多，不过没答出来关键的唯一索引。</p>
+</li>
+<li><p>接着又问知道哪些设计模式？</p>
+</li>
+<li><p>问实习做的项目的整个产品架构，包括哪些中间件，组件等。看除了做我这部分，还会不会了解其他的部分。</p>
+</li>
+<li><p>分布式锁的实现有哪些？没答上。说了一个典型的锁超时问题。</p>
+</li>
+<li><p>交易系统中金额用float还是double？</p>
+</li>
+<li><p>基础问题，如为什么用B+之类的。</p>
+<p>（很有东西，不过我确实没回答好。。。</p>
+</li>
+</ol>
+<h4 id="9-22-一面（蚂蚁）"><a href="#9-22-一面（蚂蚁）" class="headerlink" title="9.22 一面（蚂蚁）"></a>9.22 一面（蚂蚁）</h4><p>总结：阿里真牛，他问问题可以从起因经过结果影响一系列全问出来。</p>
+<p>第一次视频面试1h20min：综合技术面</p>
+<p>先给40min写代码题，2题，第一题是给你一个数组，找出其中符合这样特征（数左边的数都比其小，数右边的数都比其大）的数，返回其组成的数组。第二题是这个<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/coin-change/">零钱兑换</a>。第一个题我先用快排排序，然后和原数组比较，选相同的元素。两个题总共花了30min写完。然后面试官问第一题的优化，我说到用两个栈，一个存储从左边到右最大的，一个存储从右到左最小的，然后对每个元素比较其值就可以（灵光一现的思路），这样复杂度可以从o(logn)降低到o(n)。</p>
+<p>项目介绍</p>
+<p>redis数据结构，缓存相关问题（击穿，穿透，雪崩）</p>
+<p>mysql四种隔离级别和解决的问题</p>
+<p>描述并发一执性问题和解决怎么实现</p>
+<p>可重复性读怎么实现（我说事务内都加s锁，他说工程这样实现吗？我说那可能用MVCC，然后介绍了下MVCC）</p>
+<p>gap lock和next-key lock的区别</p>
+<p>网络5层模型</p>
+<p>路由器哪一层</p>
+<p>传输层协议，二者区别</p>
+<p>http和https区别</p>
+<p>介绍加密协商过程</p>
+<p>三个数据库设计范式是什么？解释，一般工程会用吗？（范式和反范式）</p>
+<p>Linux常用吗？<strong>cpu使用率和cpu负载区别？</strong>（没答上）</p>
+<p>接着问了老生常谈的问题why985到skd？</p>
+<p>意向？</p>
+<p>平时会主动了解新技术吗？</p>
+<p>第二次电话面试40min：主要考察python基础</p>
+<p>描述python解释器是怎么执行的？</p>
+<p>python进程通信怎么实现的，有什么问题？</p>
+<p>科学计算包怎么实现的，比如numpy？</p>
+<p>项目，解释一下蒙特卡洛算法？</p>
+<p>让你实现一个给定分布的随机生成器怎么实现？（之前面算法被问过，说一个数组，控制比例实现相应分布，然后随机选择，再进行扰动）</p>
+<p>意向选择及原因（应用开发&#x2F;算法封装&#x2F;工具类开发）</p>
+<p>面试官反馈：底层了解不够，需要加强，看到技术需要主动思考底层的实现和原理。</p>
+<p>牛啊牛啊，阿里真的牛。</p>
+<h4 id="9-23-二面（蚂蚁）"><a href="#9-23-二面（蚂蚁）" class="headerlink" title="9.23 二面（蚂蚁）"></a>9.23 二面（蚂蚁）</h4><p>第二天突然就打电话问6点前有没有时间，面了20分钟，主要聊了一下项目，非常细节，包括字段怎么定义的之类的。</p>
+<h4 id="9-28-三面-hr面（蚂蚁）"><a href="#9-28-三面-hr面（蚂蚁）" class="headerlink" title="9.28 三面+hr面（蚂蚁）"></a>9.28 三面+hr面（蚂蚁）</h4><p>和三面面试官及hr开钉钉视频会议，先自我介绍，然后问实习项目，考虑了哪些异常，因为实习项目有很多没考虑，所以面试官也没有深入问，包括redis挂了怎么办。然后介绍论文，最后就问了推免怎么选择的学校，职业路径及地点意向，蚂蚁大部分团队都在杭州。</p>
+<p>意向书！</p>
+<h3 id="华为"><a href="#华为" class="headerlink" title="华为"></a>华为</h3><h4 id="9-15-一面"><a href="#9-15-一面" class="headerlink" title="9.15 一面"></a>9.15 一面</h4><p>讲项目，围绕项目问</p>
+<p>做题，类似这道题<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/permutations-ii/">全排列 II</a>，A了，当时做的代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">count</span>(<span class="hljs-params">strr</span>):<br>    n=<span class="hljs-built_in">len</span>(strr)<br>    res=[]<br>    path=[]<br>    flags=[<span class="hljs-literal">False</span>]*n<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">backtrack</span>(<span class="hljs-params">strr,flags,path</span>):<br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(path)==n:<br>            tmp=<span class="hljs-string">&quot;&quot;</span>.join(path[:])<br>            <span class="hljs-keyword">if</span> tmp <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> res:<br>                res.append(tmp)<br>            <span class="hljs-keyword">return</span><br><br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):<br>            <span class="hljs-keyword">if</span> flags[i]==<span class="hljs-literal">False</span>:<br>                path.append(strr[i])<br>                flags[i]=<span class="hljs-literal">True</span><br>                backtrack(strr,flags,path)<br>                path.pop()<br>                flags[i]=<span class="hljs-literal">False</span><br><br>    backtrack(strr,flags,path)<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">len</span>(res)<br><br><span class="hljs-built_in">print</span>(count(<span class="hljs-string">&quot;AABBCC&quot;</span>))<br></code></pre></td></tr></table></figure>
+
+<p>后来又问了下复杂度</p>
+<p>复盘笔试做出来的题目，介绍了A了的第一题<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/max-submatrix-lcci/">最大子矩阵</a>的思路。</p>
+<p>最后问了点C++相关的问题，因为业务主要是C++进行开发，介绍了一下vector，然后又问vector中删除元素会不会造成迭代器失效？C++11新特性，比如智能指针？这块没回答好。</p>
+<p>反问问了语言的重要性，说没关系。</p>
+<h4 id="9-15-二面"><a href="#9-15-二面" class="headerlink" title="9.15 二面"></a>9.15 二面</h4><p>接着二面</p>
+<p>介绍软件类相关的项目，围绕项目问</p>
+<p>做题，括号匹配问题<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/valid-parentheses/">有效的括号</a>，A了，当时做的代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">isMatch</span>(<span class="hljs-params">s1,s2</span>):<br>    <span class="hljs-keyword">if</span> s1==<span class="hljs-string">&#x27;)&#x27;</span> <span class="hljs-keyword">and</span> s2==<span class="hljs-string">&#x27;(&#x27;</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br>    <span class="hljs-keyword">if</span> s1==<span class="hljs-string">&#x27;]&#x27;</span> <span class="hljs-keyword">and</span> s2==<span class="hljs-string">&#x27;[&#x27;</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br>    <span class="hljs-keyword">if</span> s1==<span class="hljs-string">&#x27;&#125;&#x27;</span> <span class="hljs-keyword">and</span> s2==<span class="hljs-string">&#x27;&#123;&#x27;</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br>    <span class="hljs-keyword">if</span> s1==<span class="hljs-string">&#x27;&gt;&#x27;</span> <span class="hljs-keyword">and</span> s2==<span class="hljs-string">&#x27;&lt;&#x27;</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">judgeMatch</span>(<span class="hljs-params">strr</span>):<br>    stack=[]<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> strr:<br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(stack)&gt;<span class="hljs-number">0</span> <span class="hljs-keyword">and</span> isMatch(i,stack[-<span class="hljs-number">1</span>]):<br>            stack.pop()<br>        <span class="hljs-keyword">else</span>:<br>            stack.append(i)<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">len</span>(stack)==<span class="hljs-number">0</span><br><br><span class="hljs-built_in">print</span>(judgeMatch(<span class="hljs-string">&quot;[&#123;&#123;&#125;]&lt;&gt;&gt;&quot;</span>))<br></code></pre></td></tr></table></figure>
+
+<p>（感觉好开心，因为可以写很简洁的正确代码了！）</p>
+<p>问了测试用例和复杂度。好像是这一面还是上一面问了怎么优化？</p>
+<h4 id="9-24-主管面"><a href="#9-24-主管面" class="headerlink" title="9.24 主管面"></a>9.24 主管面</h4><p>线下面试，主要聊一下项目和对软件开发的看法了解，也就是知识的广度吧。</p>
+<p>面完10分钟收到短信通过。</p>
+<p>结果：一直泡池子，说发意向书也没发。</p>
+<p>结果更新：11.25打电话说车bu缺人，可以直接发offer，offer最最低档次（学校真的。。。）涨到22还是拒了，估计加班很猛。</p>
+<p>12.7 又打电话说要发offer，交了的三方还可以毁。。拒了，蹲一波华为造车！</p>
+<h3 id="微软"><a href="#微软" class="headerlink" title="微软"></a>微软</h3><h4 id="9-14-mock-interview"><a href="#9-14-mock-interview" class="headerlink" title="9.14 mock interview"></a>9.14 mock interview</h4><p>mock interview是群面抢答思路的形式，可以免笔试直接进面试。四道题分别如下，前两道leetcode有原题，后两道没有。</p>
+<ol>
+<li><h5 id="字符串转换整数-atoi"><a href="#字符串转换整数-atoi" class="headerlink" title="字符串转换整数 (atoi)"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/string-to-integer-atoi/">字符串转换整数 (atoi)</a></h5></li>
+<li><h5 id="和为-K-的子数组"><a href="#和为-K-的子数组" class="headerlink" title="和为 K 的子数组"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/subarray-sum-equals-k/">和为 K 的子数组</a></h5></li>
+<li><p>一个数组的中位数（快排）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">findMidNum</span>(<span class="hljs-params">arr</span>): <span class="hljs-comment"># len(arr)&gt;=1</span><br>    n=<span class="hljs-built_in">len</span>(arr)<br>    tarIdx=[]<br>    <span class="hljs-keyword">if</span> n%<span class="hljs-number">2</span>==<span class="hljs-number">0</span>:<br>        tarIdx.append(n // <span class="hljs-number">2</span> - <span class="hljs-number">1</span>)<br>        tarIdx.append(n//<span class="hljs-number">2</span>)<br>    <span class="hljs-keyword">else</span>:<br>        tarIdx.append(n//<span class="hljs-number">2</span>)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">partition</span>(<span class="hljs-params">nums,l,r</span>):<br>        tmp=nums[l]<br>        <span class="hljs-keyword">while</span> l&lt;r:<br>            <span class="hljs-keyword">while</span> l&lt;r <span class="hljs-keyword">and</span> nums[r]&gt;=tmp:<br>                r-=<span class="hljs-number">1</span><br>            nums[l]=nums[r]<br>            <span class="hljs-keyword">while</span> l&lt;r <span class="hljs-keyword">and</span> nums[l]&lt;=tmp:<br>                l+=<span class="hljs-number">1</span><br>            nums[r]=nums[l]<br>        nums[l]=tmp<br>        <span class="hljs-keyword">return</span> l<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">quickSort</span>(<span class="hljs-params">nums,l,r,tar</span>):<br>        <span class="hljs-keyword">if</span> l&lt;r:<br>            <span class="hljs-keyword">if</span> tar==[]:<br>                <span class="hljs-keyword">return</span><br>            idx=partition(nums,l,r)<br>            <span class="hljs-keyword">if</span> idx==tar[<span class="hljs-number">0</span>]:<br>                tar.pop(<span class="hljs-number">0</span>)<br>            <span class="hljs-keyword">elif</span> idx&lt;tar[<span class="hljs-number">0</span>]:<br>                quickSort(nums,idx+<span class="hljs-number">1</span>,r,tar)<br>            <span class="hljs-keyword">else</span>:<br>                quickSort(nums,l,idx-<span class="hljs-number">1</span>,tar)<br><br>    quickSort(arr,<span class="hljs-number">0</span>,<span class="hljs-built_in">len</span>(arr)-<span class="hljs-number">1</span>,tarIdx)<br>    <span class="hljs-keyword">if</span> n%<span class="hljs-number">2</span>==<span class="hljs-number">0</span>:<br>        <span class="hljs-keyword">return</span> (arr[n//<span class="hljs-number">2</span>-<span class="hljs-number">1</span>]+arr[n//<span class="hljs-number">2</span>])/<span class="hljs-number">2</span><br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">return</span> arr[n//<span class="hljs-number">2</span>]<br><span class="hljs-built_in">print</span>(findMidNum([<span class="hljs-number">9</span>,<span class="hljs-number">3</span>,<span class="hljs-number">1</span>,<span class="hljs-number">6</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]))<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>一个升序数组和目标数，不大于(&lt;&#x3D;)目标数的最大下标(类似这个题，稍微修改一下，<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/search-insert-position/">搜索插入位置</a>)</p>
+</li>
+</ol>
+<h4 id="9-21-笔试"><a href="#9-21-笔试" class="headerlink" title="9.21 笔试"></a>9.21 笔试</h4><p>前两题应该A了，最后一题有问题，代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">solution</span>(<span class="hljs-params">B</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">putObstacles</span>(<span class="hljs-params">guard</span>):<br>        i, j = guard[<span class="hljs-number">0</span>], guard[<span class="hljs-number">1</span>]<br>        <span class="hljs-keyword">if</span> mtx[i][j] == <span class="hljs-string">&#x27;&lt;&#x27;</span>:<br>            j -= <span class="hljs-number">1</span><br>            <span class="hljs-keyword">while</span> j &gt;= <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> (mtx[i][j] == <span class="hljs-string">&#x27;.&#x27;</span> <span class="hljs-keyword">or</span> mtx[i][j] == <span class="hljs-string">&#x27;A&#x27;</span>):<br>                <span class="hljs-keyword">if</span> mtx[i][j] == <span class="hljs-string">&#x27;A&#x27;</span>:<br>                    discover = <span class="hljs-literal">True</span><br>                    <span class="hljs-keyword">return</span><br>                mtx[i][j] = <span class="hljs-string">&#x27;X&#x27;</span><br>                <span class="hljs-keyword">if</span> j &gt; <span class="hljs-number">0</span>:<br>                    j -= <span class="hljs-number">1</span><br>        <span class="hljs-keyword">elif</span> mtx[i][j] == <span class="hljs-string">&#x27;&gt;&#x27;</span>:<br>            j += <span class="hljs-number">1</span><br>            <span class="hljs-keyword">while</span> j &lt; M <span class="hljs-keyword">and</span> (mtx[i][j] == <span class="hljs-string">&#x27;.&#x27;</span> <span class="hljs-keyword">or</span> mtx[i][j] == <span class="hljs-string">&#x27;A&#x27;</span>):<br>                <span class="hljs-keyword">if</span> mtx[i][j] == <span class="hljs-string">&#x27;A&#x27;</span>:<br>                    discover = <span class="hljs-literal">True</span><br>                    <span class="hljs-keyword">return</span><br>                mtx[i][j] = <span class="hljs-string">&#x27;X&#x27;</span><br>                <span class="hljs-keyword">if</span> j &lt; M - <span class="hljs-number">1</span>:<br>                    j += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">elif</span> mtx[i][j] == <span class="hljs-string">&#x27;^&#x27;</span>:<br>            i -= <span class="hljs-number">1</span><br>            <span class="hljs-keyword">while</span> i &gt;= <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> (mtx[i][j] == <span class="hljs-string">&#x27;.&#x27;</span> <span class="hljs-keyword">or</span> mtx[i][j] == <span class="hljs-string">&#x27;A&#x27;</span>):<br>                <span class="hljs-keyword">if</span> mtx[i][j] == <span class="hljs-string">&#x27;A&#x27;</span>:<br>                    discover = <span class="hljs-literal">True</span><br>                    <span class="hljs-keyword">return</span><br>                mtx[i][j] = <span class="hljs-string">&#x27;X&#x27;</span><br>                <span class="hljs-keyword">if</span> i &gt; <span class="hljs-number">0</span>:<br>                    i -= <span class="hljs-number">1</span><br>        <span class="hljs-keyword">else</span>:  <span class="hljs-comment"># v</span><br>            i += <span class="hljs-number">1</span><br>            <span class="hljs-keyword">while</span> i &lt; N <span class="hljs-keyword">and</span> (mtx[i][j] == <span class="hljs-string">&#x27;.&#x27;</span> <span class="hljs-keyword">or</span> mtx[i][j] == <span class="hljs-string">&#x27;A&#x27;</span>):<br>                <span class="hljs-keyword">if</span> mtx[i][j] == <span class="hljs-string">&#x27;A&#x27;</span>:<br>                    discover = <span class="hljs-literal">True</span><br>                    <span class="hljs-keyword">return</span><br>                mtx[i][j] = <span class="hljs-string">&#x27;X&#x27;</span><br>                <span class="hljs-keyword">if</span> i &lt; N - <span class="hljs-number">1</span>:<br>                    i += <span class="hljs-number">1</span><br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">backtrack</span>(<span class="hljs-params">mtx, i, j, flag, access</span>): <span class="hljs-comment"># 笔试时遗留的大bug，将flag参数传入函数，在函数内进行修改，外面的变量不会变。</span><br>        <span class="hljs-built_in">print</span>(i,j)<br>        <span class="hljs-keyword">if</span> flag == <span class="hljs-literal">True</span>:<br>            <span class="hljs-keyword">return</span> flag<br>        <span class="hljs-keyword">if</span> i &lt; <span class="hljs-number">0</span> <span class="hljs-keyword">or</span> i &gt;= N <span class="hljs-keyword">or</span> j &lt; <span class="hljs-number">0</span> <span class="hljs-keyword">or</span> j &gt;= M:<br>            <span class="hljs-keyword">return</span> flag<br>        <span class="hljs-keyword">if</span> i == (N - <span class="hljs-number">1</span>) <span class="hljs-keyword">and</span> j == (M - <span class="hljs-number">1</span>):<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;ssss&#x27;</span>)<br>            flag = <span class="hljs-literal">True</span><br>            <span class="hljs-keyword">return</span> flag<br>        access[i][j] = <span class="hljs-literal">True</span><br>        <span class="hljs-keyword">if</span> i &gt; <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> mtx[i - <span class="hljs-number">1</span>][j] == <span class="hljs-string">&#x27;.&#x27;</span> <span class="hljs-keyword">and</span> access[i-<span class="hljs-number">1</span>][j]==<span class="hljs-literal">False</span>: <span class="hljs-comment"># 之前把access==True的情况放在递归结束的条件中，造成另外的bug。根本就不应该让其进去，所以得放在条件里面。</span><br>            <span class="hljs-keyword">return</span> backtrack(mtx, i - <span class="hljs-number">1</span>, j, flag, access)<br>        <span class="hljs-keyword">if</span> i &lt; N - <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> mtx[i + <span class="hljs-number">1</span>][j] == <span class="hljs-string">&#x27;.&#x27;</span> <span class="hljs-keyword">and</span> access[i+<span class="hljs-number">1</span>][j]==<span class="hljs-literal">False</span>:<br>            <span class="hljs-keyword">return</span> backtrack(mtx, i + <span class="hljs-number">1</span>, j, flag, access)<br>        <span class="hljs-keyword">if</span> j &gt; <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> mtx[i][j - <span class="hljs-number">1</span>] == <span class="hljs-string">&#x27;.&#x27;</span> <span class="hljs-keyword">and</span> access[i][j-<span class="hljs-number">1</span>]==<span class="hljs-literal">False</span>:<br>            <span class="hljs-keyword">return</span> backtrack(mtx, i, j - <span class="hljs-number">1</span>, flag, access)<br>        <span class="hljs-keyword">if</span> j &lt; M - <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> mtx[i][j + <span class="hljs-number">1</span>] == <span class="hljs-string">&#x27;.&#x27;</span> <span class="hljs-keyword">and</span> access[i][j+<span class="hljs-number">1</span>]==<span class="hljs-literal">False</span>:<br>            <span class="hljs-keyword">return</span> backtrack(mtx, i, j + <span class="hljs-number">1</span>, flag, access)<br><br>    <span class="hljs-comment"># write your code in Python 3.6</span><br>    N, M = <span class="hljs-built_in">len</span>(B), <span class="hljs-built_in">len</span>(B[<span class="hljs-number">0</span>])<br>    mtx = []<br>    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> B:<br>        new_line = []<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> line:<br>            new_line.append(i)<br>        mtx.append(new_line)<br>    <span class="hljs-built_in">print</span>(np.array(mtx))<br>    guards = []<br>    stoller = []<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(N):<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(M):<br>            <span class="hljs-keyword">if</span> mtx[i][j] == <span class="hljs-string">&#x27;A&#x27;</span>:<br>                stoller.append([i, j])<br>            <span class="hljs-keyword">if</span> mtx[i][j] <span class="hljs-keyword">in</span> [<span class="hljs-string">&#x27;&gt;&#x27;</span>, <span class="hljs-string">&#x27;&lt;&#x27;</span>, <span class="hljs-string">&#x27;^&#x27;</span>, <span class="hljs-string">&#x27;v&#x27;</span>]:<br>                guards.append([i, j])<br>    discover = <span class="hljs-literal">False</span><br>    <span class="hljs-keyword">for</span> guard <span class="hljs-keyword">in</span> guards:<br>        putObstacles(guard)<br>        <span class="hljs-keyword">if</span> discover == <span class="hljs-literal">True</span>: <span class="hljs-comment"># 此函数中的discover变量还未被修改，类似的bug</span><br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br>    <span class="hljs-built_in">print</span>(np.array(mtx))<br>    flag = <span class="hljs-literal">False</span><br>    access = [[<span class="hljs-literal">False</span>] * M <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(N)]<br>    flag=backtrack(mtx, stoller[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>], stoller[<span class="hljs-number">0</span>][<span class="hljs-number">1</span>], flag, access) <span class="hljs-comment"># flag变量通过函数返回值已更新当前函数中的值</span><br>    <span class="hljs-keyword">return</span> flag<br><span class="hljs-built_in">print</span>(solution([<span class="hljs-string">&#x27;...Xv&#x27;</span>, <span class="hljs-string">&#x27;AX..^&#x27;</span>, <span class="hljs-string">&#x27;.XX..&#x27;</span>]))<br></code></pre></td></tr></table></figure>
+
+<p>别怀疑，我真的写了100行python。现在觉得经常写python会对代码思维造成影响，比如这里的函数中向子函数中传参值修改不会影响外面的，C++中就可以显式声明是引用传递，指针传递，还是值传递。要尽快转Java或者C++了。</p>
+<h3 id="英特尔"><a href="#英特尔" class="headerlink" title="英特尔"></a>英特尔</h3><h4 id="9-26-面试"><a href="#9-26-面试" class="headerlink" title="9.26 面试"></a>9.26 面试</h4><p>三个部门捞了我包括我投递的云和系统，还有主动捞我的SFP，SFP聊的最久，有三轮面试。</p>
+<p>前两个最后都问了我做测试的意向。</p>
+<p>云bu：第一个问了fork()，没回答好。。。还写了一个算法题，第二个好像就随便问了下（面太多忘记了）</p>
+<p><strong>sse</strong>：写了两个算法题，第一个爬楼梯，第二个判断一个数组中是否最大的数比其他的数两倍还大，是TRUE否则FALSE。然后会考察英语，英语介绍项目，又让我介绍了一下os里面进程相关的东西，我用英文描述了一下。</p>
+<p>前两个部门因为项目没什么match的，估计不太行。</p>
+<p>SFP主要是分为开发，测试和自动化，和自动化的聊了很久，两条线，一条是测试框架，一条是网站前后端（To B），主要是python去搭建一些框架，总共面了三面，第一面写了2题，找第一个不重复的字符，还有一个py多线程的问题，后面都是随便聊聊，最后一面问了很多cs基础，包括网络，数据库。最后和测试也聊了，明确不会去测试，尽管那个小姐姐非常可爱。</p>
+<p>最后还问了一下职业路线吧，主要可以分为技术和管理两条线，技术可以转管理，技术以后就是架构，管理主要是团队管理等。</p>
+<p>结果：国庆节前没有收到positive的邮件，10.15也无消息，应该挂了，毕竟问的也不多，答的也不好，还没有背景，HC又少，稳挂。</p>
+<p>结果更新：sse在11.25打电话告知通过，要发offer。（据说是sse内部有个hc，根据排序，前面的都拒了就到我了，offer等级也是最低，和学校成绩相关。。）</p>
+<h3 id="上海银行面试"><a href="#上海银行面试" class="headerlink" title="上海银行面试"></a>上海银行面试</h3><h4 id="10-6-线上技术面试"><a href="#10-6-线上技术面试" class="headerlink" title="10.6 线上技术面试"></a>10.6 线上技术面试</h4><p>线上视频面试，多对一面试。</p>
+<p>第一个面试官：自我介绍；工程经验的技术栈介绍；让另外的面试官考察语言C++。</p>
+<p>第二个面试官：C++是不是只能从main函数启动？多态和重载的区别？查看所有进程的命令，说了top和ps -a，说了要带参数但是不确定是哪个参数。数据库方面问了查询最大最小平均还要分页用到的函数，漏掉了limit。要查询两个字段，加快查询的方法，回答加联合索引，问索引的缺点。</p>
+<p>第三个面试官：介绍mysql的锁，介绍到幻读的时候问什么是幻读，介绍隔离级别，两大存储引擎的优缺点，redis数据类型，优点，缓存过期策略（没答上），redis集群相关的东西（没答上，什么是哨兵模式），缓存击穿和缓存雪崩。</p>
+<p>第一个面试官：问了对金融相关业务的了解，不太了解。。。然后反问了工作内容和时间，内容就是开发，时间就是8个小时工作制，上午8:30-9:00，下午6点。</p>
+<p>整体表现：不是非常流利，但是大多数回答上了。</p>
+<p>结果：说好一周内给结果，10.15还无动静，估计挂，很大程度上可能因为我不了解金融知识，实力坑自己。</p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>大概定了就去互联网做开发吧，但是还得试试其他的类型，继续申请机会+有机会就试！</p>
+<h4 id="鹏城实验室"><a href="#鹏城实验室" class="headerlink" title="鹏城实验室"></a>鹏城实验室</h4><p>先面了一个新成立的部门-媒体与交互部，大概聊了下项目，然后就问一系列技术点，主要是问你会不会，包括内存管理，垃圾回收，多线程编程，数据库检索优化方式，微服务，云原生等。他们主要是计算机图形学，3D建模等，主要肯定是算法，但对工程人才需求量大，主要负责实现算法，算法落地等。培养的话，有企业的老师和深圳大学合作的老师等。工作时间说开始的时候轻松，后面就没说了，感觉不妙。</p>
+<p>又面了一个新型网络研究部，是几个人对一个的形式，先介绍了部门的几个方向，让我选一个然后开始面试，边缘计算架构部，神经网络相关的部，和一个操作系统驱动相关的部门，我选了最后一个，聊了一下实习经历，随便考察了下语言C++，os基础，感觉我也不是很对口，可能不需要问更多。最后反问了事业单位的情况，是事业单位，但没有编制，和企业很像，工资比事业单位高，比企业低，两三年需要续签一次合同，有考核，年底也有奖金，4薪不等，只有博士是科研岗，硕士一般都是工程岗，分为助理工程师，工程师等这些。</p>
+<p>收到了信息收集邮件，主动放弃。</p>
+<p>面了芯片部门，负责软件，上海和北京也都有团队，上海团队是处理器中心。</p>
+<h4 id="领英-后端"><a href="#领英-后端" class="headerlink" title="领英-后端"></a>领英-后端</h4><p>先自我介绍，然后介绍实习经历，深挖项目细节及常见工程上的考量和底层（比如其他分布式锁的实现，redis集群是怎么运作的，比如加一些节点要怎么迁移数据等，redis过期时间是怎么设计的），主要就是从项目到涉及到的中间件和方法设计。问了计算机网络，讲一下TCP，扣的比较细，包括为什么要设计快速重传，为什么不能等到计时器过期之类的。面试官有提示，总体挺好的。最后就做题，<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/minimum-window-substring">最小覆盖子串</a>，写的思路没问题，但是有bug，现场也没调试出来。。20天没写代码的后果。。然后时间到了，面试官就说可以了，也没让我反问，草草结束离场，稳凉。</p>
+<h4 id="电信研究院-上海"><a href="#电信研究院-上海" class="headerlink" title="电信研究院-上海"></a>电信研究院-上海</h4><p>发现上次去线下招聘会真的有用，之前自己在线上投的完全没鸟我，后来改投北京也不行，线下是投了上海的。</p>
+<p>面试10分钟&#x3D;&#x3D;介绍了实习的东西，也没有细问，问会java吗不会。。问在学校做了什么，算法和生物建模。。低语好像没啥可问的。反问了工作时间和工作内容，时间是8：30-17:30，内容是面向公司内部的需求开发，主要是java。不match，over。</p>
+<h4 id="交通银行总行-上海"><a href="#交通银行总行-上海" class="headerlink" title="交通银行总行-上海"></a>交通银行总行-上海</h4><p>发现果然只有上海才比较认上科大。。公司还是对同城学校的学生比较好。。</p>
+<p>一面没问什么，随便聊了一下。我面的是金融科技部门的信科岗，反问的时候了解了金科部门的地位，相当于是技术部门的leader，管理各个技术部门，比如开发，安全，数据等。感觉蛮好的。</p>
+<p>问了工作时间，理论上9-5点，多多少少还是会加班的。。。</p>
+<p>整个面试安排是二轮面试+一轮笔试，最后笔试。</p>
+<p>pass到复试</p>
+<p>复试没问技术问题，就问职业规划这类的，说到自己想先做技术，以后再转技术manager或者团队manager。反问我还是想先做技术？（言下之意。。。）所以金融科技不重视技术，是综合能力，现在才悟过来。所以我说我想先搞技术，肯定会被挂。。</p>
+<p>以后跳槽考虑吧！</p>
+<p>复试pass到笔试！</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div></div>
+      <div>http://example.com/2021/07/23/2021暑期实习末期及秋招面经/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Jade Chu</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年7月23日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/07/13/hello-world/" title="Hello World">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/06/10/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/" title="测试文章">
+                        <span class="hidden-mobile">测试文章</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  <article id="comments" lazyload>
+    
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.4.17/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"xwodfQI7FirT5b8wLqYsFSio-gzGzoHsz","appKey":"XdWKK6oFyn3DxhyFCxnpeGjg","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  </article>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        总访问量 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        总访客数 
+        <span id="leancloud-site-uv"></span>
+         人
+      </span>
+    
+    
+
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
