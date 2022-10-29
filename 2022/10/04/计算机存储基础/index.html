@@ -29,8 +29,9 @@
 <meta property="og:image" content="http://example.com/2022/10/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%98%E5%82%A8%E5%9F%BA%E7%A1%80/bus.jpg">
 <meta property="og:image" content="http://example.com/2022/10/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%98%E5%82%A8%E5%9F%BA%E7%A1%80/iobus.jpg">
 <meta property="og:image" content="http://example.com/2022/10/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%98%E5%82%A8%E5%9F%BA%E7%A1%80/ssd.jpg">
+<meta property="og:image" content="http://example.com/Users/zhulin/Desktop/hexo-blog/source/_posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%98%E5%82%A8%E5%9F%BA%E7%A1%80/ssd-m2.png">
 <meta property="article:published_time" content="2022-10-04T08:00:12.000Z">
-<meta property="article:modified_time" content="2022-10-06T02:30:37.724Z">
+<meta property="article:modified_time" content="2022-10-20T13:19:18.479Z">
 <meta property="article:author" content="Jade Chu">
 <meta property="article:tag" content="原创">
 <meta name="twitter:card" content="summary_large_image">
@@ -243,7 +244,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.7k 字
+          5.7k 字
         
       </span>
     
@@ -254,7 +255,7 @@
         
         
         
-          14 分钟
+          48 分钟
         
       </span>
     
@@ -330,9 +331,83 @@
 <p>固态硬盘是一种基于闪存的存储技术，通常SSD包需要插到I&#x2F;O总线上的标准硬盘插槽（USB或者SATA），行为和其他硬盘一样，处理来自CPU的请求。一个SSD包包括一个或多个闪存芯片（对应磁盘驱动器）和闪存翻译层（对应磁盘控制器）。SSD的结构图如下：</p>
 <img title="" src="ssd.jpg" srcset="/img/loading.gif" lazyload alt="" width="523" data-align="center">
 
-<p>SSD的顺序读和写的性能相当，顺序读比顺序写稍微快点，但是随机写比读慢一个数量级，这是由闪存基本属性决定的。一个闪存由B块组成，每块由P页组成，页大小是512～4KB，块由32～128页组成，块大小为16KB～512KB。数据以页为单位读写，只有在一页所属的整个块被擦除后才能写该页，而100000次重复写之后块就会磨损。随即写慢的原因是擦除块消耗时间长及写的时候如果需要擦除块需要在其他干净的块上备份原来的内容。</p>
-<p>Ref:</p>
-<p>《深入理解计算机系统》，2016</p>
+<p>SSD的顺序读和写的性能相当，顺序读比顺序写稍微快点，但是随机写比读慢一个数量级，这是由闪存基本属性决定的。一个闪存由B块组成，每块由P页组成，页大小是512～4KB，块由32～128页组成，块大小为16KB～512KB。数据以页为单位读写，只有在一页所属的整个块被擦除后才能写该页，而100000次重复写之后块就会磨损（以块为单位擦除，以页为单位读写）。随即写慢的原因是擦除块消耗时间长及写的时候如果需要擦除块需要在其他干净的块上备份原来的内容。</p>
+<p> 固态硬盘三大组成：主控芯片、缓存（独立缓存和模拟缓存）、闪存芯片。固态硬盘的接口类型主要有三种，PCIE（现在很少）、SATA（机械硬盘也使用这种接口，SATA接口的固态走的是SATA通道，500M&#x2F;s）和M.2接口（当前的主流）。</p>
+<p><img src="/Users/zhulin/Desktop/hexo-blog/source/_posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%98%E5%82%A8%E5%9F%BA%E7%A1%80/ssd-m2.png" srcset="/img/loading.gif" lazyload></p>
+<p>闪存颗粒用来存放数据，种类主要包括SLC、MLC、TLC和QLC。从左向右，存储单元存储的数据越来越多、价格越来越便宜、读写次数越少，市面常见的是TLC颗粒。独立缓存是DRAM，存放FTL映射表，但是不是所有固态硬盘都有独立缓存。而模拟缓存是所有固态硬盘都有的，用存储单元来模拟SLC颗粒。</p>
+<h4 id="3、磁盘测试工具：fio"><a href="#3、磁盘测试工具：fio" class="headerlink" title="3、磁盘测试工具：fio"></a>3、磁盘测试工具：fio</h4><p><a target="_blank" rel="noopener" href="https://fio.readthedocs.io/en/latest/fio_doc.html">fio官方文档</a></p>
+<p>fio是一个较流行的磁盘性能测试工具，它通过用户定义的线程&#x2F;进程来进行一些I&#x2F;O操作。其基本参数包括：</p>
+<p><strong>I&#x2F;O type：</strong> 定义I&#x2F;O的pattern，比如读写方式，-rw，是否有buffer，-direct等</p>
+<ul>
+<li><p>-direct&#x3D;bool，true即使用不带缓存的I&#x2F;O</p>
+</li>
+<li><p>-readwrite&#x3D;str，read即串行读，write即串行写，randread即随机读，randwrite即随机写，rw即串行混合读写，randrw即随机混合读写。混合读写时，默认的读写比例是50&#x2F;50。</p>
+</li>
+</ul>
+<p><strong>Block size：</strong> Block大小，-bs</p>
+<ul>
+<li>-blocksize&#x3D;int，以字节为单位的块大小，默认是4096（4k）</li>
+</ul>
+<p><strong>I&#x2F;O size：</strong> 读或写总的数据量，-size</p>
+<p>-size&#x3D;int，该job每个线程的文件IO的总大小，Fio将会一直运行直到所有数据全部传输过去，除非指定了-runtime等参数来控制运行时间。</p>
+<p><strong>Job description：</strong></p>
+<p>-name，Job的名字</p>
+<p>-numjobs&#x3D;int，创建指定数量的job的副本，每个克隆是一个独立的线程或者进程。默认值是1。</p>
+<p><strong>Time related parameters：</strong></p>
+<ul>
+<li><p>-runtime&#x3D;time，fio在指定的时间后将会终止进程，单位省略时，默认是秒</p>
+</li>
+<li><p>-time_based，如果设置该值时，fio将会在-runtime持续的时间内一直运行，即便文件已经被读完&#x2F;写完。它会在时间允许的范围内循环相同的workload。</p>
+</li>
+</ul>
+<p><strong>I&#x2F;O engine：</strong> 定义作业如何向文件发出I&#x2F;O</p>
+<ul>
+<li>-ioengine&#x3D;str，包括多种类型，如psync，基本的pread&#x2F;pwrite I&#x2F;O，libaio，Linux原生的异步I&#x2F;O</li>
+</ul>
+<p><strong>I&#x2F;O depth：</strong> 当I&#x2F;O engine是async时，需要维护的队列深度</p>
+<p>-iodepth&#x3D;int，针对文件保持运行的I&#x2F;O单元数，当&gt;1时不会影响同步的I&#x2F;O engine，即使是异步的I&#x2F;O engine，由于OS的限制，可能也不会达到指定的I&#x2F;O深度，比如在使用libaio的时候，必须将-direct&#x3D;1，因为带缓存的IO在Linux上不是异步的。iodepth默认是1。</p>
+<p><strong>I&#x2F;O rate：</strong></p>
+<ul>
+<li>-rate&#x3D;int，限制该job使用的bandwidth，-rate&#x3D;500k即500KiB&#x2F;s，1m即1MiB&#x2F;s。</li>
+</ul>
+<p><strong>Target file&#x2F;device：</strong></p>
+<ul>
+<li>-filename&#x3D;str，指定设备 (裸盘，如&#x2F;dev&#x2F;sda)&#x2F;文件 (带文件系统，如&#x2F;mnt&#x2F;test)的名称</li>
+</ul>
+<p><strong>Threads, processes and job synchronization：</strong></p>
+<ul>
+<li>-thread，Fio默认用fork来创建作业，如果指定该参数，fio将会用POSIX线程函数pthread_create()来创建线程。</li>
+</ul>
+<p><strong>Measurements and reporting：</strong></p>
+<ul>
+<li>-group_reporting：用per-group的结果代替per-job，尤其当使用-numjobs参数时。</li>
+</ul>
+<p><strong>Command line options：</strong></p>
+<p>–output&#x3D;filename，将输出写到filename的文件中</p>
+<p><strong>输出解释：</strong></p>
+<p>这部分主要解释Fio的输出。当fio运行的时候，fio将会展示创建job的状态，如：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">Jobs: 1 (<span class="hljs-attribute">f</span>=1): [_(1),M(1)][24.8%][<span class="hljs-attribute">r</span>=20.5MiB/s,w=23.5MiB/s][<span class="hljs-attribute">r</span>=82,w=94 IOPS][eta 01m:31s]<br></code></pre></td></tr></table></figure>
+
+<p>第一个方括号里面表示每个线程当前的状态，状态由不同的字母表示，如M表示“Running, doing mixed sequential reads&#x2F;writes”。jobs是当前正在执行I&#x2F;O的线程数，f代表当前打开的文件数，估计完成的比例，读写分别的bw和IOPS，最后是完成的剩余时间。</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs routeros">Client1: (<span class="hljs-attribute">groupid</span>=0, <span class="hljs-attribute">jobs</span>=1): err= 0: <span class="hljs-attribute">pid</span>=16109: Sat Jun 24 12:07:54 2017<br>  write: <span class="hljs-attribute">IOPS</span>=88, <span class="hljs-attribute">BW</span>=623KiB/s (638kB/s)(30.4MiB/50032msec)<br>    slat (nsec): <span class="hljs-attribute">min</span>=500, <span class="hljs-attribute">max</span>=145500, <span class="hljs-attribute">avg</span>=8318.00, <span class="hljs-attribute">stdev</span>=4781.50<br>    clat (usec): <span class="hljs-attribute">min</span>=170, <span class="hljs-attribute">max</span>=78367, <span class="hljs-attribute">avg</span>=4019.02, <span class="hljs-attribute">stdev</span>=8293.31<br>     lat (usec): <span class="hljs-attribute">min</span>=174, <span class="hljs-attribute">max</span>=78375, <span class="hljs-attribute">avg</span>=4027.34, <span class="hljs-attribute">stdev</span>=8291.79<br>    clat percentiles (usec):<br>     |  1.00th=[  302],  5.00th=[  326], 10.00th=[  343], 20.00th=[  363],<br>     | 30.00th=[  392], 40.00th=[  404], 50.00th=[  416], 60.00th=[  445],<br>     | 70.00th=[  816], 80.00th=[ 6718], 90.00th=[12911], 95.00th=[21627],<br>     | 99.00th=[43779], 99.50th=[51643], 99.90th=[68682], 99.95th=[72877],<br>     | 99.99th=[78119]<br>   bw (  KiB/s): min=  532, max=  686, <span class="hljs-attribute">per</span>=0.10%, <span class="hljs-attribute">avg</span>=622.87, <span class="hljs-attribute">stdev</span>=24.82, samples=  100<br>   iops        : min=   76, max=   98, <span class="hljs-attribute">avg</span>=88.98, stdev= 3.54, samples=  100<br>  lat (usec)   : <span class="hljs-attribute">250</span>=0.04%, <span class="hljs-attribute">500</span>=64.11%, <span class="hljs-attribute">750</span>=4.81%, <span class="hljs-attribute">1000</span>=2.79%<br>  lat (msec)   : <span class="hljs-attribute">2</span>=4.16%, <span class="hljs-attribute">4</span>=1.84%, <span class="hljs-attribute">10</span>=4.90%, <span class="hljs-attribute">20</span>=11.33%, <span class="hljs-attribute">50</span>=5.37%<br>  lat (msec)   : <span class="hljs-attribute">100</span>=0.65%<br>  cpu          : <span class="hljs-attribute">usr</span>=0.27%, <span class="hljs-attribute">sys</span>=0.18%, <span class="hljs-attribute">ctx</span>=12072, <span class="hljs-attribute">majf</span>=0, <span class="hljs-attribute">minf</span>=21<br>  IO depths    : <span class="hljs-attribute">1</span>=85.0%, <span class="hljs-attribute">2</span>=13.1%, <span class="hljs-attribute">4</span>=1.8%, <span class="hljs-attribute">8</span>=0.1%, <span class="hljs-attribute">16</span>=0.0%, <span class="hljs-attribute">32</span>=0.0%, &gt;=<span class="hljs-attribute">64</span>=0.0%<br>     submit    : <span class="hljs-attribute">0</span>=0.0%, <span class="hljs-attribute">4</span>=100.0%, <span class="hljs-attribute">8</span>=0.0%, <span class="hljs-attribute">16</span>=0.0%, <span class="hljs-attribute">32</span>=0.0%, <span class="hljs-attribute">64</span>=0.0%, &gt;=<span class="hljs-attribute">64</span>=0.0%<br>     complete  : <span class="hljs-attribute">0</span>=0.0%, <span class="hljs-attribute">4</span>=100.0%, <span class="hljs-attribute">8</span>=0.0%, <span class="hljs-attribute">16</span>=0.0%, <span class="hljs-attribute">32</span>=0.0%, <span class="hljs-attribute">64</span>=0.0%, &gt;=<span class="hljs-attribute">64</span>=0.0%<br>     issued rwt: <span class="hljs-attribute">total</span>=0,4450,0, <span class="hljs-attribute">short</span>=0,0,0, <span class="hljs-attribute">dropped</span>=0,0,0<br>     latency   : <span class="hljs-attribute">target</span>=0, <span class="hljs-attribute">window</span>=0, <span class="hljs-attribute">percentile</span>=100.00%, <span class="hljs-attribute">depth</span>=8<br></code></pre></td></tr></table></figure>
+
+<p>当程序运行完或者ctrl+c结束后，程序会打印出如上信息。</p>
+<p>read&#x2F;write&#x2F;trim：代表测试目的，均为平均值，单位需要注意一下，一种是以2为幂，一种是以10为幂。</p>
+<p>slat：提交的latency</p>
+<p>clat：完成的latency</p>
+<p>lat：总的latency，是slat和clat的总和</p>
+<p>bw和iops：基于样本的带宽和iops的统计</p>
+<p>lat（nsec&#x2F;usec&#x2F;msec）：io比例和完成时间的关系</p>
+<p>cpu：cpu的利用率</p>
+<p>IO depth：IO深度随着job生命周期的分布</p>
+<p>IO submit：在单独的提交调用中有多少片IO被提交了</p>
+<p>IO complete：类似上面的提交数，这里是完成数</p>
+<p>整个组的统计数据如下：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">Run</span> status group <span class="hljs-number">0</span> (<span class="hljs-literal">all</span> jobs):<br>   <span class="hljs-attribute">READ</span>: bw=<span class="hljs-number">20</span>.<span class="hljs-number">9</span>MiB/s (<span class="hljs-number">21</span>.<span class="hljs-number">9</span>MB/s), <span class="hljs-number">10</span>.<span class="hljs-number">4</span>MiB/s-<span class="hljs-number">10</span>.<span class="hljs-number">8</span>MiB/s (<span class="hljs-number">10</span>.<span class="hljs-number">9</span>MB/s-<span class="hljs-number">11</span>.<span class="hljs-number">3</span>MB/s), io=<span class="hljs-number">64</span>.<span class="hljs-number">0</span>MiB (<span class="hljs-number">67</span>.<span class="hljs-number">1</span>MB), run=<span class="hljs-number">2973</span>-<span class="hljs-number">3069</span>msec<br>  <span class="hljs-attribute">WRITE</span>: bw=<span class="hljs-number">1231</span>KiB/s (<span class="hljs-number">1261</span>kB/s), <span class="hljs-number">616</span>KiB/s-<span class="hljs-number">621</span>KiB/s (<span class="hljs-number">630</span>kB/s-<span class="hljs-number">636</span>kB/s), io=<span class="hljs-number">64</span>.<span class="hljs-number">0</span>MiB (<span class="hljs-number">67</span>.<span class="hljs-number">1</span>MB), run=<span class="hljs-number">52747</span>-<span class="hljs-number">53223</span>msec<br></code></pre></td></tr></table></figure>
+
+<h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h4><p>《深入理解计算机系统》，2016</p>
+<p><a target="_blank" rel="noopener" href="https://fio.readthedocs.io/en/latest/fio_doc.html">1. fio - Flexible I&#x2F;O tester rev. 3.32 &amp;#8212; fio 3.32-43-g0ebd3-dirty documentation</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1XW4y187Nc/?spm_id_from=333.337.search-card.all.click&amp;vd_source=67ea0a2dadfb7d60a9cd51319231956e">https://www.bilibili.com/video/BV1XW4y187Nc/?spm_id_from=333.337.search-card.all.click&amp;vd_source=67ea0a2dadfb7d60a9cd51319231956e</a></p>
 
                 
               </div>
@@ -420,6 +495,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2022/10/29/Overview/" title="Overview">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Overview</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
